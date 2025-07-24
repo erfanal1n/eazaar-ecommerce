@@ -63,7 +63,7 @@ const SalesProductsCardItems = () => {
   } = useGetSalesProductsQuery();
 
   // Get total product value from metrics
-  const totalProductValue = salesData?.metrics?.totalProducts || 0;
+  const totalProductValue = (salesData?.metrics as any)?.totalProductValue || 0;
 
   // decide what to render
   let content = null;
