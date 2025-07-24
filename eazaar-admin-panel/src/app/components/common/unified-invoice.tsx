@@ -254,7 +254,7 @@ const UnifiedInvoice = ({ mode, orderData, className = "" }: Props) => {
       justifyContent: 'space-between',
       alignItems: 'center',
       borderTop: `1px solid ${invoiceColors.border}`,
-      flexWrap: 'wrap',
+      flexWrap: 'wrap' as const,
       gap: '15px'
     },
     footerItem: {
@@ -692,7 +692,7 @@ function getOrderInvoiceData(orderData: Order, settings: InvoiceSettings) {
     invoice: orderData.invoice ? orderData.invoice.toString() : "000000",
     date: orderData.createdAt || new Date().toISOString(),
     customerName: orderData.user?.name || "Customer",
-    customerPhone: orderData.user?.phone || orderData.user?.contactNumber || "N/A",
+    customerPhone: (orderData.user as any)?.phone || (orderData.user as any)?.contactNumber || "N/A",
     customerEmail: orderData.user?.email || "N/A",
     customerAddress: orderData.address || orderData.user?.address || "N/A",
     items: cart.map((item, index) => ({
