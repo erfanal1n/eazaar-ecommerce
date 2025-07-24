@@ -28,11 +28,8 @@ const analyticsRoutes = require("./routes/analytics.routes");
 const invoiceSettingsRoutes = require("./routes/invoice-settings.routes");
 const bannerPositionRoutes = require("./routes/bannerPosition");
 const bannerRoutes = require("./routes/banner");
-const testHeroBannerRoutes = require("./routes/testHeroBanner");
-const testHeroBannerImageRoutes = require("./routes/testHeroBannerImage");
 const currencyConfigRoutes = require("./routes/currencyConfigRoutes");
 const adminRoleRoutes = require("./routes/adminRole");
-const testCloudinaryRoutes = require("./routes/test-cloudinary");
 
 // Enhanced CORS middleware
 app.use(cors({
@@ -113,11 +110,8 @@ app.use("/api/analytics", analyticsRoutes);
 app.use("/api/invoice-settings", invoiceSettingsRoutes);
 app.use("/api/banner-positions", bannerPositionRoutes);
 app.use("/api/banners", bannerRoutes);
-app.use("/api/test-hero-banners", testHeroBannerRoutes);
-app.use("/api/test-hero-images", testHeroBannerImageRoutes);
 app.use("/api/currencies", currencyConfigRoutes);
 app.use("/api/admin-role", adminRoleRoutes);
-app.use("/api/test-cloudinary", testCloudinaryRoutes);
 
 // Favicon route
 app.get("/favicon.ico", (req, res) => {
