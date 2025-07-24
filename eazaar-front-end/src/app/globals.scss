@@ -1,0 +1,80 @@
+@import '~bootstrap/scss/bootstrap';
+@import "~slick-carousel/slick/slick.css"; 
+@import "swiper/css/bundle";
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
+@import '../../public/assets/scss/main.scss';
+@import '../styles/banner-skeleton.scss';
+
+/* Custom Toast Styles - Form-Centered & Responsive */
+.toast-container {
+  position: fixed !important;
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 9999 !important;
+  pointer-events: none;
+}
+
+.custom-toast {
+  pointer-events: auto;
+  animation: slideInFromTop 0.3s ease-out;
+  margin: 0 auto 8px auto !important;
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .toast-container {
+    top: 10px !important;
+    left: 10px !important;
+    right: 10px !important;
+    transform: none !important;
+    width: calc(100% - 20px) !important;
+  }
+  
+  .custom-toast {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: auto !important;
+    font-size: 13px !important;
+    padding: 10px 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .toast-container {
+    top: 5px !important;
+    left: 5px !important;
+    right: 5px !important;
+    width: calc(100% - 10px) !important;
+  }
+  
+  .custom-toast {
+    font-size: 12px !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+  }
+}
+
+/* Form-specific positioning for login/register pages */
+.login-page .toast-container,
+.register-page .toast-container {
+  top: 60px !important;
+}
+
+@media (max-width: 768px) {
+  .login-page .toast-container,
+  .register-page .toast-container {
+    top: 40px !important;
+  }
+}

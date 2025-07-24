@@ -1,0 +1,2893 @@
+// ============================================
+// Global Dark Mode Styles - 2025 Ultra Modern
+// ============================================
+
+// Body and layout dark mode
+.theme-dark {
+  body {
+    background-color: var(--tp-bg-primary);
+    color: var(--tp-text-body);
+    transition: all 0.3s ease;
+  }
+
+  // Header dark mode enhancements
+  .tp-header-area {
+    background: var(--tp-bg-primary);
+    border-bottom: 1px solid var(--tp-border-primary);
+  }
+
+  .tp-header-top,
+  .tp-header-top-2 {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-bottom: 1px solid var(--tp-border-primary);
+    
+    // Header welcome message (FREE Express Shipping)
+    .tp-header-welcome {
+      p {
+        color: var(--tp-text-body);
+        margin: 0;
+      }
+      
+      span {
+        color: var(--tp-theme-primary);
+        
+        svg {
+          fill: var(--tp-theme-primary);
+        }
+      }
+    }
+    
+    // Header top right menu items
+    .tp-header-top-menu {
+      .tp-header-top-menu-item {
+        
+        // Language selector
+        &.tp-header-lang {
+          .tp-header-lang-toggle {
+            color: var(--tp-text-body);
+            cursor: pointer;
+            
+            &:hover {
+              color: var(--tp-theme-primary);
+            }
+          }
+          
+          ul {
+            background: var(--tp-card-bg);
+            border: 1px solid var(--tp-card-border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            
+            li a {
+              color: var(--tp-text-body);
+              
+              &:hover {
+                background: var(--tp-card-hover);
+                color: var(--tp-theme-primary);
+              }
+            }
+          }
+        }
+        
+        // Currency selector
+        &.tp-header-currency {
+          .tp-header-currency-toggle {
+            color: var(--tp-text-body);
+            cursor: pointer;
+            
+            &:hover {
+              color: var(--tp-theme-primary);
+            }
+          }
+          
+          ul {
+            background: var(--tp-card-bg);
+            border: 1px solid var(--tp-card-border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            
+            li a {
+              color: var(--tp-text-body);
+              
+              &:hover {
+                background: var(--tp-card-hover);
+                color: var(--tp-theme-primary);
+              }
+            }
+          }
+        }
+        
+        // Settings dropdown
+        &.tp-header-setting {
+          .tp-header-setting-toggle {
+            color: var(--tp-text-body);
+            cursor: pointer;
+            
+            &:hover {
+              color: var(--tp-theme-primary);
+            }
+          }
+          
+          ul {
+            background: var(--tp-card-bg);
+            border: 1px solid var(--tp-card-border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            
+            li a {
+              color: var(--tp-text-body);
+              
+              &:hover {
+                background: var(--tp-card-hover);
+                color: var(--tp-theme-primary);
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    // Header info items (Facebook followers, phone number)
+    .tp-header-info {
+      .tp-header-info-item {
+        a {
+          color: var(--tp-text-body);
+          
+          &:hover {
+            color: var(--tp-theme-primary);
+          }
+          
+          span {
+            color: var(--tp-theme-primary);
+            
+            svg {
+              fill: var(--tp-theme-primary);
+              stroke: var(--tp-theme-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Header main section
+  .tp-header-main {
+    background: var(--tp-bg-primary);
+    
+    .logo {
+      // Logo should remain visible in dark mode
+    }
+    
+    // Header login section
+    .tp-header-login {
+      .tp-header-login-content {
+        span, a {
+          color: var(--tp-text-body);
+        }
+        
+        .tp-header-login-title a {
+          color: var(--tp-text-3);
+          
+          &:hover {
+            color: var(--tp-theme-primary);
+          }
+        }
+      }
+    }
+    
+    // Header action buttons
+    .tp-header-action {
+      .tp-header-action-btn {
+        color: var(--tp-text-body);
+        
+        &:hover {
+          color: var(--tp-theme-primary);
+        }
+        
+        svg {
+          color: var(--tp-text-body);
+          
+          &:hover {
+            color: var(--tp-theme-primary);
+          }
+          
+          // For filled icons (like wishlist)
+          &[fill*="currentColor"] {
+            fill: var(--tp-text-body);
+            
+            &:hover {
+              fill: var(--tp-theme-primary);
+            }
+          }
+          
+          // For stroke icons (like cart)
+          &[stroke*="currentColor"] {
+            stroke: var(--tp-text-body);
+            fill: none;
+            
+            &:hover {
+              stroke: var(--tp-theme-primary);
+            }
+          }
+        }
+      }
+      
+      .tp-header-action-badge {
+        background: var(--tp-theme-primary);
+        color: var(--tp-common-white);
+      }
+    }
+  }
+
+  .tp-header-bottom {
+    background: var(--tp-bg-primary);
+    border-top: 1px solid var(--tp-border-primary);
+    
+    // Header contact section
+    .tp-header-contact {
+      .tp-header-contact-content {
+        h5 {
+          color: var(--tp-heading-primary);
+        }
+        
+        p a {
+          color: var(--tp-text-body);
+          
+          &:hover {
+            color: var(--tp-theme-primary);
+          }
+        }
+      }
+      
+      .tp-header-contact-icon {
+        span {
+          color: var(--tp-theme-primary);
+          
+          svg {
+            fill: var(--tp-theme-primary);
+          }
+        }
+      }
+    }
+    
+    // Category menu button
+    .tp-category-menu-btn {
+      background: var(--tp-card-bg);
+      color: var(--tp-text-body);
+      border: 1px solid var(--tp-card-border);
+      
+      &:hover {
+        background: var(--tp-card-hover);
+        color: var(--tp-theme-primary);
+      }
+      
+      span svg {
+        fill: var(--tp-text-body);
+      }
+    }
+  }
+
+  // Search form dark mode
+  .tp-header-search-box input {
+    background-color: var(--tp-input-bg);
+    color: var(--tp-input-text);
+    border: 1px solid var(--tp-input-border);
+
+    &::placeholder {
+      color: var(--tp-text-3);
+    }
+
+    &:focus {
+      border-color: var(--tp-input-focus);
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+    }
+  }
+
+  // Category dropdown dark mode
+  .nice-select {
+    background-color: var(--tp-input-bg);
+    color: var(--tp-input-text);
+    border: 1px solid var(--tp-input-border);
+
+    &:after {
+      border-color: var(--tp-text-3) transparent transparent;
+    }
+
+    .list {
+      background-color: var(--tp-surface);
+      border: 1px solid var(--tp-border-primary);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+      .option {
+        color: var(--tp-text-body);
+
+        &:hover,
+        &.selected {
+          background-color: var(--tp-surface-hover);
+          color: var(--tp-text-body);
+        }
+      }
+    }
+  }
+
+  // Product cards dark mode
+  .tp-product-item {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+  }
+
+  .tp-product-content {
+    background: transparent;
+
+    h3, h4 {
+      color: var(--tp-heading-primary);
+    }
+
+    p {
+      color: var(--tp-text-body);
+    }
+  }
+
+  .tp-product-price {
+    color: var(--tp-price-color);
+  }
+
+  // Buttons dark mode
+  .tp-btn,
+  .tp-btn-2 {
+    background: var(--tp-btn-bg);
+    color: var(--tp-btn-text);
+    border: 1px solid var(--tp-btn-border);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--tp-btn-hover);
+      border-color: var(--tp-border-secondary);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  // Primary button (theme colored)
+  .tp-btn.tp-btn-primary {
+    background: var(--tp-theme-primary);
+    color: white;
+    border-color: var(--tp-theme-primary);
+
+    &:hover {
+      background: #0369a1;
+      border-color: #0369a1;
+    }
+  }
+
+  // Cards and containers
+  .tp-section-box,
+  .tp-banner-item,
+  .tp-deal-item,
+  .tp-feature-item {
+    background: var(--tp-card-bg);
+    border: 1px solid var(--tp-card-border);
+
+    &:hover {
+      background: var(--tp-card-hover);
+      border-color: var(--tp-border-secondary);
+    }
+  }
+
+  // Sticky header dark mode
+  .tp-header-sticky-area {
+    background: var(--tp-bg-primary);
+    border-bottom: 1px solid var(--tp-border-primary);
+    
+    .tp-header-action {
+      .tp-header-action-btn {
+        color: var(--tp-text-body);
+        
+        &:hover {
+          color: var(--tp-theme-primary);
+        }
+        
+        svg {
+          color: var(--tp-text-body);
+          
+          // For filled icons (like wishlist)
+          &[fill*="currentColor"] {
+            fill: var(--tp-text-body);
+          }
+          
+          // For stroke icons (like cart)
+          &[stroke*="currentColor"] {
+            stroke: var(--tp-text-body);
+            fill: none;
+          }
+        }
+      }
+      
+      .tp-header-action-badge {
+        background: var(--tp-theme-primary);
+        color: var(--tp-common-white);
+      }
+    }
+  }
+
+  // Navigation menus dark mode
+  .tp-main-menu > nav > ul > li > a {
+    color: var(--tp-heading-primary);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--tp-theme-primary);
+    }
+  }
+
+  .tp-mega-menu {
+    background: var(--tp-surface);
+    border: 1px solid var(--tp-border-primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    .mega-menu-item {
+      color: var(--tp-text-body);
+
+      &:hover {
+        color: var(--tp-theme-primary);
+        background: var(--tp-surface-hover);
+      }
+    }
+  }
+
+  // Category menu dark mode
+  .tp-category-menu-content {
+    background: var(--tp-surface);
+    border: 1px solid var(--tp-border-primary);
+
+    ul li a {
+      color: var(--tp-text-body);
+      border-bottom: 1px solid var(--tp-border-primary);
+
+      &:hover {
+        color: var(--tp-theme-primary);
+        background: var(--tp-surface-hover);
+      }
+    }
+  }
+
+  // Footer dark mode
+  .tp-footer-area {
+    background: var(--tp-footer-grey-1);
+    border-top: 1px solid var(--tp-border-primary);
+
+    h4, h5, h6 {
+      color: var(--tp-heading-primary);
+    }
+
+    p, span, a {
+      color: var(--tp-text-body);
+
+      &:hover {
+        color: var(--tp-theme-primary);
+      }
+    }
+  }
+
+  // Contact info components dark mode
+  .tp-contact-info-wrapper {
+    .tp-contact-info-item {
+      background: var(--tp-card-bg);
+      border: 1px solid var(--tp-card-border);
+      
+      .tp-contact-info-icon {
+        span {
+          color: var(--tp-theme-primary);
+          background: rgba(var(--tp-theme-primary-rgb), 0.1);
+          
+          svg {
+            fill: var(--tp-theme-primary);
+            stroke: var(--tp-theme-primary);
+          }
+        }
+      }
+      
+      .tp-contact-info-content {
+        h3 {
+          color: var(--tp-heading-primary);
+        }
+        
+        p, span, a {
+          color: var(--tp-text-body);
+          
+          &:hover {
+            color: var(--tp-theme-primary);
+          }
+        }
+        
+        // Social media icons
+        .tp-contact-social {
+          a {
+            background: var(--tp-card-hover);
+            color: var(--tp-text-body);
+            border: 1px solid var(--tp-card-border);
+            
+            &:hover {
+              background: var(--tp-theme-primary);
+              color: var(--tp-common-white);
+              border-color: var(--tp-theme-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Forms and inputs dark mode
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="search"],
+  textarea,
+  select {
+    background: var(--tp-input-bg);
+    color: var(--tp-input-text);
+    border: 1px solid var(--tp-input-border);
+
+    &::placeholder {
+      color: var(--tp-text-3);
+    }
+
+    &:focus {
+      border-color: var(--tp-input-focus);
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+    }
+  }
+
+  // Pagination dark mode
+  .tp-pagination {
+    .page-link {
+      background: var(--tp-card-bg);
+      color: var(--tp-text-body);
+      border: 1px solid var(--tp-border-primary);
+
+      &:hover {
+        background: var(--tp-card-hover);
+        color: var(--tp-theme-primary);
+      }
+
+      &.active {
+        background: var(--tp-theme-primary);
+        color: white;
+        border-color: var(--tp-theme-primary);
+      }
+    }
+  }
+
+  // Breadcrumb dark mode
+  .tp-breadcrumb {
+    background: var(--tp-bg-secondary);
+    border-bottom: 1px solid var(--tp-border-primary);
+
+    a, span {
+      color: var(--tp-text-body);
+
+      &:hover {
+        color: var(--tp-theme-primary);
+      }
+    }
+  }
+  
+  // Common breadcrumb styling for dark mode
+  .breadcrumb__area--bg {
+    background-color: var(--tp-bg-primary) !important;
+  }
+  
+  .breadcrumb__area {
+    .breadcrumb__title {
+      color: var(--tp-heading-primary) !important;
+    }
+    
+    .breadcrumb__list {
+      span {
+        color: var(--tp-text-body) !important;
+        
+        &:not(:last-child)::after {
+          background-color: var(--tp-text-3) !important;
+        }
+        
+        a {
+          color: var(--tp-text-body) !important;
+          
+          &:hover {
+            color: var(--tp-theme-primary) !important;
+          }
+        }
+      }
+    }
+  }
+
+  // Modal dark mode
+  .modal-content {
+    background: var(--tp-surface);
+    border: 1px solid var(--tp-border-primary);
+    color: var(--tp-text-body);
+
+    .modal-header {
+      border-bottom: 1px solid var(--tp-border-primary);
+
+      .modal-title {
+        color: var(--tp-heading-primary);
+      }
+
+      .btn-close {
+        filter: invert(1);
+      }
+    }
+
+    .modal-footer {
+      border-top: 1px solid var(--tp-border-primary);
+    }
+  }
+
+  // Dropdown menus dark mode
+  .dropdown-menu {
+    background: var(--tp-surface);
+    border: 1px solid var(--tp-border-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    .dropdown-item {
+      color: var(--tp-text-body);
+
+      &:hover {
+        background: var(--tp-surface-hover);
+        color: var(--tp-theme-primary);
+      }
+    }
+  }
+
+  // Toast notifications dark mode
+  .toast {
+    background: var(--tp-surface);
+    border: 1px solid var(--tp-border-primary);
+    color: var(--tp-text-body);
+
+    .toast-header {
+      background: var(--tp-bg-secondary);
+      border-bottom: 1px solid var(--tp-border-primary);
+      color: var(--tp-heading-primary);
+    }
+  }
+
+  // Scrollbar dark mode
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--tp-bg-secondary);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--tp-border-secondary);
+    border-radius: 4px;
+
+    &:hover {
+      background: var(--tp-text-3);
+    }
+  }
+
+  // Loader and spinner dark mode
+  .spinner-border {
+    color: var(--tp-theme-primary);
+  }
+
+  .tp-preloader {
+    background: var(--tp-bg-primary);
+  }
+
+  // Rating stars dark mode
+  .tp-product-rating {
+    .rating-star {
+      color: var(--tp-rating-color);
+    }
+  }
+
+  // Price and sale badges dark mode
+  .tp-product-badge {
+    &.sale {
+      background: #dc2626;
+      color: white;
+    }
+
+    &.new {
+      background: var(--tp-theme-primary);
+      color: white;
+    }
+
+    &.hot {
+      background: #ea580c;
+      color: white;
+    }
+  }
+
+  // Search suggestions dark mode
+  .search-suggestions {
+    background: var(--tp-surface);
+    border: 1px solid var(--tp-border-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    .suggestion-item {
+      color: var(--tp-text-body);
+      border-bottom: 1px solid var(--tp-border-primary);
+
+      &:hover {
+        background: var(--tp-surface-hover);
+        color: var(--tp-theme-primary);
+      }
+    }
+  }
+
+  // Cart mini sidebar dark mode
+  .tp-cartmini-area {
+    background: var(--tp-surface);
+    border-left: 1px solid var(--tp-border-primary);
+
+    .cartmini-item {
+      border-bottom: 1px solid var(--tp-border-primary);
+
+      .cartmini-content {
+        h5, span {
+          color: var(--tp-text-body);
+        }
+
+        .cartmini-price {
+          color: var(--tp-price-color);
+        }
+      }
+    }
+  }
+
+  // Offcanvas dark mode
+  .offcanvas {
+    background: var(--tp-surface);
+    border-left: 1px solid var(--tp-border-primary);
+    color: var(--tp-text-body);
+
+    .offcanvas-header {
+      border-bottom: 1px solid var(--tp-border-primary);
+
+      .offcanvas-title {
+        color: var(--tp-heading-primary);
+      }
+    }
+  }
+
+  // Feature component dark mode styles
+  .tp-feature-inner-2 {
+    background: var(--tp-card-bg);
+    border: 1px solid var(--tp-card-border);
+  }
+
+  .tp-feature-title-2 {
+    color: var(--tp-heading-primary);
+  }
+
+  .tp-feature-icon-2 span {
+    color: var(--tp-text-body);
+  }
+
+  .tp-feature-content-2 p {
+    color: var(--tp-text-body);
+  }
+
+  // Fix for equal height feature boxes in dark mode
+  .tp-feature-area {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      
+      > [class*="col-"] {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .tp-feature-item,
+  .tp-feature-item-2 {
+    height: 100%;
+    min-height: 120px;
+    display: flex;
+    align-items: flex-start;
+    
+    .tp-feature-content,
+    .tp-feature-content-2 {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      h3 {
+        margin-bottom: 8px;
+        line-height: 1.3;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      
+      p {
+        margin: 0;
+        line-height: 1.4;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  // Fix separator lines in dark mode
+  .tp-feature-border-2 .tp-feature-item-2::after {
+    background-color: var(--tp-border-primary);
+  }
+
+  // Product tabs dark mode - clean transparent styling
+  .tp-product-tab {
+    background: transparent !important;
+    
+    .nav-tabs {
+      border-bottom: none !important;
+      background: transparent !important;
+      padding-left: 50px; // Keep same spacing as light mode
+      
+      @media (max-width: 767px) {
+        padding-left: 0; // Keep responsive behavior
+      }
+
+      .nav-item {
+        .nav-link {
+          color: var(--tp-text-body) !important;
+          background: transparent !important;
+          border: none !important;
+          padding: 0 !important; // Remove default padding that creates boxes
+          margin: 0 !important;
+
+          &:hover {
+            color: var(--tp-theme-primary) !important;
+            background: transparent !important;
+            border: none !important;
+          }
+
+          &.active {
+            color: var(--tp-theme-primary) !important;
+            background: transparent !important;
+            border: none !important;
+
+            .tp-product-tab-line svg path {
+              stroke: var(--tp-theme-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Product area section dark mode - clean transparent styling
+  .tp-product-area {
+    background: transparent !important;
+    
+    .tp-product-tab-border {
+      background: transparent !important;
+      
+      // Keep the decorative line between title and tabs
+      &::after {
+        background-color: var(--tp-border-primary) !important;
+        // Maintain same positioning as light mode
+        position: absolute;
+        content: '';
+        left: -80px;
+        top: 50%;
+        width: 420px;
+        height: 2px;
+        z-index: -1;
+        
+        @media (max-width: 767px) {
+          display: none; // Hide on mobile like light mode
+        }
+      }
+    }
+  }
+
+  // Product arrival slider dark mode
+  .tp-product-arrival-border {
+    background: transparent !important;
+    
+    &::after {
+      background-color: var(--tp-border-primary) !important;
+    }
+  }
+
+  // ============================================
+  // TARGETED COMPONENT DARK MODE STYLES
+  // ============================================
+
+  // Essential form styling only
+  input, select, textarea {
+    &.tp-input,
+    &[class*="tp-"] {
+      background: var(--tp-input-bg);
+      color: var(--tp-input-text);
+      border: 1px solid var(--tp-input-border);
+      
+      &::placeholder {
+        color: var(--tp-text-3);
+      }
+      
+      &:focus {
+        border-color: var(--tp-input-focus);
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+      }
+    }
+  }
+
+  // Product Components Dark Mode - COMPREHENSIVE FIX
+  .tp-product-item,
+  .tp-product-item-2,
+  .tp-product-item-3,
+  .tp-product-item-4 {
+    background: var(--tp-card-bg) !important;
+    border: 1px solid var(--tp-card-border) !important;
+    
+    &:hover {
+      background: var(--tp-card-hover) !important;
+      border-color: var(--tp-border-secondary) !important;
+    }
+    
+    .tp-product-content,
+    .tp-product-content-2 {
+      background: transparent !important;
+      
+      .tp-product-category {
+        a {
+          color: var(--tp-text-3) !important;
+          
+          &:hover {
+            color: var(--tp-theme-primary) !important;
+          }
+        }
+      }
+      
+      .tp-product-title,
+      .tp-product-title-2 {
+        h3, h4 {
+          a {
+            color: var(--tp-heading-primary) !important;
+            
+            &:hover {
+              color: var(--tp-theme-primary) !important;
+            }
+          }
+        }
+      }
+      
+      .tp-product-rating {
+        .tp-product-rating-icon {
+          a {
+            color: var(--tp-text-3) !important;
+            
+            &:hover {
+              color: #fbbf24 !important;
+            }
+          }
+        }
+      }
+      
+      .tp-product-price-wrapper,
+      .tp-product-price-wrapper-2 {
+        .tp-product-price,
+        .tp-product-price-2 {
+          color: var(--tp-theme-primary) !important;
+        }
+        
+        .tp-product-price-old {
+          color: var(--tp-text-3) !important;
+        }
+      }
+      
+      // Additional text elements
+      p {
+        color: var(--tp-text-body) !important;
+      }
+      
+      span {
+        color: var(--tp-text-body) !important;
+      }
+    }
+    
+    .tp-product-action {
+      .tp-product-action-btn {
+        background: var(--tp-card-bg);
+        color: var(--tp-text-body);
+        border: 1px solid var(--tp-card-border);
+        
+        &:hover {
+          background: var(--tp-theme-primary);
+          color: var(--tp-common-white);
+          border-color: var(--tp-theme-primary);
+        }
+      }
+      
+      .tp-product-add-cart-btn {
+        background: var(--tp-theme-primary);
+        color: var(--tp-common-white);
+        
+        &:hover {
+          background: var(--tp-theme-secondary);
+        }
+      }
+    }
+    
+    .tp-product-badge {
+      &.new-product {
+        background: #10b981;
+        color: var(--tp-common-white);
+      }
+      
+      &.sale-product {
+        background: #ef4444;
+        color: var(--tp-common-white);
+      }
+      
+      &.featured-product {
+        background: var(--tp-theme-primary);
+        color: var(--tp-common-white);
+      }
+    }
+  }
+
+  // Product Area Sections
+  .tp-product-area {
+    .tp-section-title {
+      h3, h4 {
+        color: var(--tp-heading-primary);
+      }
+      
+      p {
+        color: var(--tp-text-body);
+      }
+    }
+  }
+
+  // Product Grid/List View
+  .tp-shop-list-item {
+    background: var(--tp-card-bg) !important;
+    border: 1px solid var(--tp-card-border) !important;
+    
+    .tp-product-list-content {
+      .tp-product-list-title {
+        h3 {
+          a {
+            color: var(--tp-heading-primary) !important;
+            
+            &:hover {
+              color: var(--tp-theme-primary) !important;
+            }
+          }
+        }
+      }
+      
+      .tp-product-list-price {
+        span {
+          color: var(--tp-theme-primary) !important;
+        }
+      }
+      
+      p {
+        color: var(--tp-text-body) !important;
+      }
+    }
+  }
+
+  // Remove broad selectors that were causing unwanted boxes
+
+  // Only style actual product cards, not section containers
+  .tp-product-item,
+  .tp-product-item-2,
+  .tp-product-item-3,
+  .tp-product-item-4 {
+    background: var(--tp-card-bg) !important;
+    border: 1px solid var(--tp-card-border) !important;
+    
+    &:hover {
+      background: var(--tp-card-hover) !important;
+      border-color: var(--tp-border-secondary) !important;
+    }
+    
+    .tp-product-content,
+    .tp-product-content-2 {
+      background: transparent !important;
+      
+      .tp-product-category a {
+        color: var(--tp-text-3) !important;
+        
+        &:hover {
+          color: var(--tp-theme-primary) !important;
+        }
+      }
+      
+      .tp-product-title,
+      .tp-product-title-2 {
+        h3, h4 {
+          a {
+            color: var(--tp-heading-primary) !important;
+            
+            &:hover {
+              color: var(--tp-theme-primary) !important;
+            }
+          }
+        }
+      }
+      
+      .tp-product-price-wrapper,
+      .tp-product-price-wrapper-2 {
+        .tp-product-price,
+        .tp-product-price-2 {
+          color: var(--tp-theme-primary) !important;
+        }
+        
+        .tp-product-price-old {
+          color: var(--tp-text-3) !important;
+        }
+      }
+      
+      p {
+        color: var(--tp-text-body) !important;
+      }
+    }
+  }
+
+  // ============================================
+  // SHOP PAGE DARK MODE STYLES - FIX FOR VISIBILITY ISSUES
+  // ============================================
+  
+  // Shop top area (grid/list toggle and filters)
+  .tp-shop-top {
+    // Grid/List view toggle buttons
+    .tp-shop-top-tab {
+      .nav-tabs {
+        .nav-item {
+          .nav-link {
+            background-color: var(--tp-input-bg) !important;
+            color: var(--tp-text-body) !important;
+            border: 1px solid var(--tp-input-border) !important;
+            
+            &:hover {
+              background-color: var(--tp-card-hover) !important;
+              color: var(--tp-theme-primary) !important;
+              border-color: var(--tp-theme-primary) !important;
+            }
+            
+            &.active {
+              background-color: var(--tp-theme-primary) !important;
+              color: var(--tp-common-white) !important;
+              border-color: var(--tp-theme-primary) !important;
+            }
+            
+            svg {
+              fill: currentColor !important;
+              stroke: currentColor !important;
+            }
+          }
+        }
+      }
+    }
+    
+    // Sort dropdown styling
+    .tp-shop-top-select {
+      .nice-select {
+        background-color: var(--tp-input-bg) !important;
+        color: var(--tp-input-text) !important;
+        border: 1px solid var(--tp-input-border) !important;
+        
+        &::after {
+          color: var(--tp-text-3) !important;
+        }
+        
+        &:hover {
+          border-color: var(--tp-input-focus) !important;
+        }
+        
+        &.open {
+          border-color: var(--tp-theme-primary) !important;
+        }
+        
+        .list {
+          background-color: var(--tp-surface) !important;
+          border: 1px solid var(--tp-border-primary) !important;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+          
+          .option {
+            color: var(--tp-text-body) !important;
+            
+            &:hover,
+            &.selected {
+              background-color: var(--tp-surface-hover) !important;
+              color: var(--tp-theme-primary) !important;
+            }
+          }
+        }
+      }
+    }
+    
+    // Filter button styling
+    .tp-shop-top-filter {
+      .tp-filter-btn {
+        background-color: var(--tp-input-bg) !important;
+        color: var(--tp-input-text) !important;
+        border: 1px solid var(--tp-input-border) !important;
+        
+        &:hover {
+          background-color: var(--tp-theme-primary) !important;
+          color: var(--tp-common-white) !important;
+          border-color: var(--tp-theme-primary) !important;
+        }
+        
+        span svg {
+          fill: currentColor !important;
+          stroke: currentColor !important;
+        }
+      }
+    }
+    
+    // Results text styling
+    .tp-shop-top-result {
+      p {
+        color: var(--tp-text-body) !important;
+      }
+    }
+  }
+  
+  // Shop sidebar widgets
+  .tp-shop-widget {
+    // Widget titles
+    .tp-shop-widget-title {
+      color: var(--tp-heading-primary) !important;
+      border-bottom-color: var(--tp-border-primary) !important;
+    }
+    
+    // Price filter
+    .tp-shop-widget-filter {
+      // Price range display
+      .tp-shop-widget-filter-info {
+        .input-range {
+          color: var(--tp-text-body) !important;
+        }
+        
+        // Filter button
+        .tp-shop-widget-filter-btn {
+          background-color: var(--tp-input-bg) !important;
+          color: var(--tp-input-text) !important;
+          border: 1px solid var(--tp-input-border) !important;
+          
+          &:hover {
+            background-color: var(--tp-theme-primary) !important;
+            color: var(--tp-common-white) !important;
+            border-color: var(--tp-theme-primary) !important;
+          }
+        }
+      }
+    }
+    
+    // Checkbox filters
+    .tp-shop-widget-checkbox {
+      ul li {
+        label {
+          color: var(--tp-text-body) !important;
+          
+          &::after {
+            border-color: var(--tp-input-border) !important;
+          }
+        }
+        
+        input:checked ~ label {
+          &::after {
+            background-color: var(--tp-theme-primary) !important;
+            border-color: var(--tp-theme-primary) !important;
+          }
+        }
+      }
+    }
+    
+    // Category filter
+    .tp-shop-widget-categories {
+      ul li a {
+        color: var(--tp-text-body) !important;
+        
+        &::after {
+          background-color: var(--tp-border-primary) !important;
+        }
+        
+        &:hover,
+        &.active {
+          color: var(--tp-theme-primary) !important;
+          
+          &::after {
+            background-color: var(--tp-theme-primary) !important;
+          }
+          
+          span {
+            background-color: var(--tp-theme-primary) !important;
+            border-color: var(--tp-theme-primary) !important;
+            color: var(--tp-common-white) !important;
+          }
+        }
+        
+        span {
+          background-color: var(--tp-input-bg) !important;
+          color: var(--tp-text-body) !important;
+          border: 1px solid var(--tp-input-border) !important;
+        }
+      }
+    }
+    
+    // Color filter circles
+    .tp-shop-widget-checkbox-circle {
+      ul li:hover .tp-shop-widget-checkbox-circle-number {
+        background-color: var(--tp-theme-primary) !important;
+        border-color: var(--tp-theme-primary) !important;
+        color: var(--tp-common-white) !important;
+      }
+      
+      .tp-shop-widget-checkbox-circle-number {
+        background-color: var(--tp-input-bg) !important;
+        color: var(--tp-text-body) !important;
+        border: 1px solid var(--tp-input-border) !important;
+      }
+      
+      label {
+        color: var(--tp-text-body) !important;
+      }
+    }
+  }
+  
+  // Shop filter offcanvas (mobile)
+  .tp-filter-offcanvas {
+    background-color: var(--tp-surface) !important;
+    border-left: 1px solid var(--tp-border-primary) !important;
+    
+    .offcanvas-header {
+      border-bottom: 1px solid var(--tp-border-primary) !important;
+      
+      .offcanvas-title {
+        color: var(--tp-heading-primary) !important;
+      }
+      
+      .btn-close {
+        filter: invert(1) !important;
+      }
+    }
+  }
+  
+  // Shop pagination
+  .tp-shop-pagination {
+    .tp-pagination {
+      .page-item {
+        .page-link {
+          background-color: var(--tp-input-bg) !important;
+          color: var(--tp-text-body) !important;
+          border: 1px solid var(--tp-input-border) !important;
+          
+          &:hover {
+            background-color: var(--tp-card-hover) !important;
+            color: var(--tp-theme-primary) !important;
+            border-color: var(--tp-theme-primary) !important;
+          }
+        }
+        
+        &.active .page-link {
+          background-color: var(--tp-theme-primary) !important;
+          color: var(--tp-common-white) !important;
+          border-color: var(--tp-theme-primary) !important;
+        }
+      }
+    }
+  }
+
+  // ============================================
+  // CART PAGE DARK MODE STYLES
+  // ============================================
+  
+  .tp-cart-area {
+    background: transparent !important;
+    
+    // Cart list table - WHITE BACKGROUND FOR VISIBILITY
+    .tp-cart-list {
+      .table {
+        background-color: #ffffff !important;
+        border: 1px solid #e0e2e3 !important;
+        color: #000000 !important;
+        
+        // Table header
+        thead {
+          background-color: #F1F3F4 !important;
+          
+          th {
+            color: #000000 !important;
+            border-bottom: 1px solid #e0e2e3 !important;
+          }
+        }
+        
+        // Table rows
+        tbody {
+          tr {
+            background-color: #ffffff !important;
+            
+            td {
+              border-color: #e0e2e3 !important;
+              color: #000000 !important;
+              
+              // Cart action button (Remove)
+              .tp-cart-action-btn {
+                color: var(--tp-text-3) !important;
+                
+                &:hover {
+                  color: #ef4444 !important;
+                }
+                
+                svg {
+                  fill: currentColor !important;
+                  stroke: currentColor !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    // Cart image background
+    .tp-cart-img {
+      a {
+        background-color: var(--tp-card-bg) !important;
+        border: 1px solid var(--tp-card-border) !important;
+      }
+    }
+    
+    // Cart title links
+    .tp-cart-title {
+      a {
+        color: var(--tp-heading-primary) !important;
+        
+        &:hover {
+          color: var(--tp-theme-primary) !important;
+        }
+      }
+    }
+    
+    // Ensure all text in cart table cells is visible
+    .tp-cart-list {
+      .table {
+        tbody {
+          tr {
+            td {
+              // Product title specifically
+              &.tp-cart-title {
+                a {
+                  color: var(--tp-heading-primary) !important;
+                  
+                  &:hover {
+                    color: var(--tp-theme-primary) !important;
+                  }
+                }
+              }
+              
+              // Make sure all text content is visible
+              color: var(--tp-text-body) !important;
+              
+              // Force visibility for any nested text elements
+              * {
+                color: inherit !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    // Cart price - BLACK TEXT
+    .tp-cart-price {
+      span {
+        color: #000000 !important;
+        font-weight: 600 !important;
+      }
+    }
+    
+    // Make sure all price text is black
+    .tp-cart-list .table tbody tr td.tp-cart-price span {
+      color: #000000 !important;
+    }
+    
+    // Quantity controls
+    .tp-product-quantity {
+      .tp-cart-minus,
+      .tp-cart-plus {
+        background-color: var(--tp-input-bg) !important;
+        color: var(--tp-text-body) !important;
+        border: 1px solid var(--tp-input-border) !important;
+        
+        &:hover {
+          background-color: var(--tp-theme-primary) !important;
+          color: var(--tp-common-white) !important;
+          border-color: var(--tp-theme-primary) !important;
+        }
+        
+        svg {
+          fill: currentColor !important;
+          stroke: currentColor !important;
+        }
+      }
+      
+      .tp-cart-input {
+        background-color: var(--tp-input-bg) !important;
+        color: var(--tp-input-text) !important;
+        border: 1px solid var(--tp-input-border) !important;
+        
+        &::placeholder {
+          color: var(--tp-text-3) !important;
+        }
+        
+        &:focus {
+          outline: none !important;
+          border-color: var(--tp-theme-primary) !important;
+          box-shadow: 0 0 0 2px rgba(var(--tp-theme-primary-rgb), 0.2) !important;
+        }
+      }
+    }
+    
+    // Modal specific quantity controls with direct colors
+    .tp-product-modal {
+      .tp-product-quantity {
+        .tp-cart-minus,
+        .tp-cart-plus {
+          background-color: #2d3748 !important;
+          color: #ffffff !important;
+          border: 1px solid #4a5568 !important;
+          
+          &:hover {
+            background-color: var(--tp-theme-primary) !important;
+            color: #ffffff !important;
+            border-color: var(--tp-theme-primary) !important;
+          }
+          
+          svg {
+            fill: #ffffff !important;
+            stroke: #ffffff !important;
+          }
+        }
+        
+        .tp-cart-input {
+          background-color: #2d3748 !important;
+          color: #ffffff !important;
+          border: 1px solid #4a5568 !important;
+          
+          &:focus {
+            outline: none !important;
+            border-color: var(--tp-theme-primary) !important;
+            background-color: #2d3748 !important;
+            color: #ffffff !important;
+          }
+          
+          &::placeholder {
+            color: #a0aec0 !important;
+          }
+        }
+      }
+    }
+    
+    // Additional fallback for dark mode class
+    &.dark-mode .tp-product-modal {
+      .tp-product-quantity {
+        .tp-cart-input[type="text"] {
+          background-color: #2d3748 !important;
+          color: #ffffff !important;
+          border: 1px solid #4a5568 !important;
+        }
+        
+        .tp-cart-minus,
+        .tp-cart-plus {
+          background-color: #2d3748 !important;
+          color: #ffffff !important;
+          border: 1px solid #4a5568 !important;
+        }
+      }
+    }
+}
+
+// Global dark mode quantity fix (outside theme-dark scope)
+.theme-dark .tp-product-modal .tp-product-quantity .tp-cart-input[type="text"],
+[data-theme="dark"] .tp-product-modal .tp-product-quantity .tp-cart-input[type="text"],
+.dark-mode .tp-product-modal .tp-product-quantity .tp-cart-input[type="text"] {
+  background-color: #2d3748 !important;
+  color: #ffffff !important;
+  border: 1px solid #4a5568 !important;
+}
+
+.theme-dark .tp-product-modal .tp-product-quantity .tp-cart-minus,
+.theme-dark .tp-product-modal .tp-product-quantity .tp-cart-plus,
+[data-theme="dark"] .tp-product-modal .tp-product-quantity .tp-cart-minus,
+[data-theme="dark"] .tp-product-modal .tp-product-quantity .tp-cart-plus,
+.dark-mode .tp-product-modal .tp-product-quantity .tp-cart-minus,
+.dark-mode .tp-product-modal .tp-product-quantity .tp-cart-plus {
+  background-color: #2d3748 !important;
+  color: #ffffff !important;
+  border: 1px solid #4a5568 !important;
+}
+
+// Continue with the rest of the theme-dark styles
+.theme-dark {
+  // Cart update/clear button
+  .tp-cart-update {
+    .tp-cart-update-btn {
+        background-color: var(--tp-input-bg) !important;
+        color: var(--tp-text-body) !important;
+        border: 1px solid var(--tp-input-border) !important;
+        
+        &:hover {
+          background-color: var(--tp-theme-primary) !important;
+          color: var(--tp-common-white) !important;
+          border-color: var(--tp-theme-primary) !important;
+        }
+      }
+    }
+    
+    // Coupon input (if enabled)
+    .tp-cart-coupon {
+      .tp-cart-coupon-input-box {
+        label {
+          color: var(--tp-heading-primary) !important;
+        }
+      }
+      
+      .tp-cart-coupon-input {
+        input {
+          background-color: var(--tp-input-bg) !important;
+          color: var(--tp-input-text) !important;
+          border: 1px solid var(--tp-input-border) !important;
+          
+          &::placeholder {
+            color: var(--tp-text-3) !important;
+          }
+          
+          &:focus {
+            border-color: var(--tp-input-focus) !important;
+          }
+        }
+        
+        button {
+          background-color: var(--tp-theme-primary) !important;
+          color: var(--tp-common-white) !important;
+          border: 1px solid var(--tp-theme-primary) !important;
+          
+          &:hover {
+            background-color: var(--tp-theme-secondary) !important;
+            border-color: var(--tp-theme-secondary) !important;
+          }
+        }
+      }
+    }
+  }
+  
+  // Cart checkout sidebar
+  .tp-cart-checkout-wrapper {
+    background-color: var(--tp-surface) !important;
+    border: 1px solid var(--tp-border-primary) !important;
+    box-shadow: 0px 30px 70px rgba(0, 0, 0, 0.3) !important;
+    
+    // Checkout top (Subtotal)
+    .tp-cart-checkout-top {
+      border-bottom: 1px solid var(--tp-border-primary) !important;
+      
+      .tp-cart-checkout-top-title,
+      .tp-cart-checkout-top-price {
+        color: var(--tp-heading-primary) !important;
+      }
+    }
+    
+    // Shipping section
+    .tp-cart-checkout-shipping {
+      border-bottom: 1px solid var(--tp-border-primary) !important;
+      
+      .tp-cart-checkout-shipping-title {
+        color: var(--tp-heading-primary) !important;
+      }
+      
+      .tp-cart-checkout-shipping-option {
+        label {
+          color: var(--tp-text-body) !important;
+          
+          &::after {
+            border-color: var(--tp-input-border) !important;
+          }
+          
+          &::before {
+            background-color: var(--tp-theme-primary) !important;
+          }
+          
+          span {
+            color: var(--tp-theme-primary) !important;
+          }
+        }
+        
+        input:checked + label {
+          &::after {
+            border-color: var(--tp-theme-primary) !important;
+          }
+        }
+      }
+    }
+    
+    // Total section
+    .tp-cart-checkout-total {
+      span {
+        color: var(--tp-heading-primary) !important;
+        font-weight: 600 !important;
+      }
+    }
+    
+    // Proceed to checkout button
+    .tp-cart-checkout-proceed {
+      .tp-cart-checkout-btn {
+        background-color: var(--tp-theme-primary) !important;
+        color: var(--tp-common-white) !important;
+        border: 1px solid var(--tp-theme-primary) !important;
+        
+        &:hover {
+          background-color: var(--tp-theme-secondary) !important;
+          border-color: var(--tp-theme-secondary) !important;
+          transform: translateY(-1px) !important;
+          box-shadow: 0 4px 12px rgba(9, 137, 255, 0.3) !important;
+        }
+      }
+    }
+  }
+  
+  // Cart progress bar (free shipping indicator)
+  .cartmini__shipping {
+    .tp-progress {
+      background-color: var(--tp-bg-secondary) !important;
+      border: 1px solid var(--tp-border-primary) !important;
+      
+      .tp-progress-bar {
+        background-color: var(--tp-theme-primary) !important;
+      }
+    }
+    
+    .cartmini__shipping-text {
+      color: var(--tp-text-body) !important;
+      
+      span {
+        color: var(--tp-theme-primary) !important;
+        font-weight: 600 !important;
+      }
+    }
+  }
+  
+  // Additional specific cart text fixes
+  .tp-cart-area {
+    // Target any text that might still be invisible
+    .table tbody tr td {
+      // Ensure product titles are visible
+      a {
+        color: var(--tp-heading-primary) !important;
+        
+        &:hover {
+          color: var(--tp-theme-primary) !important;
+        }
+      }
+      
+      // Ensure all text content is visible
+      color: var(--tp-text-body) !important;
+    }
+    
+    // ULTRA FUCKING MODE - MAXIMUM AGGRESSION FOR CART PRODUCT NAMES
+    .tp-cart-title a,
+    .tp-cart-list .tp-cart-title a,
+    .tp-cart-area .tp-cart-title a,
+    .table .tp-cart-title a,
+    .table tbody tr td.tp-cart-title a,
+    td.tp-cart-title a,
+    .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a {
+      color: #000000 !important;
+      background-color: transparent !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      display: inline-block !important;
+      font-size: 16px !important;
+      font-weight: 400 !important;
+      text-decoration: none !important;
+      margin-left: 20px !important;
+      text-shadow: none !important;
+      outline: none !important;
+      border: none !important;
+      
+      &:hover {
+        color: var(--tp-theme-primary) !important;
+      }
+      
+      &:visited {
+        color: #000000 !important;
+      }
+      
+      &:link {
+        color: #000000 !important;
+      }
+      
+      &:active {
+        color: #000000 !important;
+      }
+    }
+    
+    // Target the container with maximum aggression
+    .tp-cart-title {
+      color: #000000 !important;
+      background-color: transparent !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      
+      * {
+        color: #000000 !important;
+        background-color: transparent !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+      
+      a {
+        color: #000000 !important;
+        background-color: transparent !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: inline-block !important;
+        font-size: 16px !important;
+        font-weight: 400 !important;
+        text-decoration: none !important;
+        margin-left: 20px !important;
+        
+        &:hover {
+          color: var(--tp-theme-primary) !important;
+        }
+      }
+    }
+  }
+
+  // ============================================
+  // CHECKOUT PAGE DARK MODE STYLES - COMPREHENSIVE FIX
+  // ============================================
+  
+  .tp-checkout-area {
+    // Override default light theme background color
+    background-color: var(--tp-bg-primary) !important;
+    
+    // Main checkout wrapper sections
+    .tp-checkout-verify {
+      .tp-checkout-verify-item {
+        .tp-checkout-verify-reveal {
+          background-color: var(--tp-card-bg) !important;
+          border: 1px solid var(--tp-card-border) !important;
+          color: var(--tp-text-body) !important;
+          
+          button {
+            color: var(--tp-theme-primary) !important;
+            background: transparent !important;
+            
+            &::after {
+              background-color: var(--tp-theme-primary) !important;
+            }
+            
+            &:hover {
+              color: var(--tp-theme-primary) !important;
+            }
+          }
+        }
+      }
+    }
+    
+    // Customer login section
+    .tp-return-customer {
+      background-color: var(--tp-card-bg) !important;
+      border: 1px solid var(--tp-card-border) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+      
+      .tp-return-customer-input {
+        label {
+          color: var(--tp-heading-primary) !important;
+          
+          span {
+            color: #ef4444 !important; // Keep red color for required indicator
+          }
+        }
+        
+        input {
+          background-color: var(--tp-input-bg) !important;
+          color: var(--tp-input-text) !important;
+          border: 1px solid var(--tp-input-border) !important;
+          
+          &::placeholder {
+            color: var(--tp-text-3) !important;
+          }
+          
+          &:focus {
+            border-color: var(--tp-input-focus) !important;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1) !important;
+          }
+        }
+      }
+      
+      .tp-return-customer-remeber {
+        label {
+          color: var(--tp-text-body) !important;
+          
+          &::after {
+            border-color: var(--tp-input-border) !important;
+          }
+          
+          &::before {
+            color: var(--tp-common-white) !important;
+          }
+        }
+        
+        input:checked ~ label {
+          &::after {
+            background-color: var(--tp-theme-primary) !important;
+            border-color: var(--tp-theme-primary) !important;
+          }
+          
+          &::before {
+            visibility: visible !important;
+            opacity: 1 !important;
+          }
+        }
+      }
+      
+      .tp-return-customer-forgot {
+        a {
+          color: var(--tp-theme-primary) !important;
+          
+          &::after {
+            background-color: var(--tp-theme-primary) !important;
+          }
+        }
+      }
+    }
+    
+    // Billing details section
+    .tp-checkout-bill-area {
+      background-color: var(--tp-card-bg) !important;
+      border: 1px solid var(--tp-card-border) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+      
+      .tp-checkout-bill-title {
+        color: var(--tp-heading-primary) !important;
+      }
+      
+      .tp-checkout-bill-form {
+        .tp-checkout-input {
+          label {
+            color: var(--tp-heading-primary) !important;
+            
+            span {
+              color: #ef4444 !important; // Keep red color for required indicator
+            }
+          }
+          
+          input,
+          textarea {
+            background-color: var(--tp-input-bg) !important;
+            color: var(--tp-input-text) !important;
+            border: 1px solid var(--tp-input-border) !important;
+            
+            &::placeholder {
+              color: var(--tp-text-3) !important;
+            }
+            
+            &:focus {
+              border-color: var(--tp-input-focus) !important;
+              box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1) !important;
+            }
+          }
+          
+          .nice-select {
+            background-color: var(--tp-input-bg) !important;
+            color: var(--tp-input-text) !important;
+            border: 1px solid var(--tp-input-border) !important;
+            
+            &::after {
+              color: var(--tp-text-3) !important;
+            }
+            
+            &:hover {
+              border-color: var(--tp-input-focus) !important;
+            }
+            
+            &.open {
+              border-color: var(--tp-theme-primary) !important;
+            }
+            
+            .list {
+              background-color: var(--tp-surface) !important;
+              border: 1px solid var(--tp-border-primary) !important;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+              
+              .option {
+                color: var(--tp-text-body) !important;
+                
+                &:hover,
+                &.selected {
+                  background-color: var(--tp-surface-hover) !important;
+                  color: var(--tp-theme-primary) !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    // Order summary section (Your Order)
+    .tp-checkout-place {
+      background-color: var(--tp-card-bg) !important;
+      border: 1px solid var(--tp-card-border) !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+      
+      .tp-checkout-place-title {
+        color: var(--tp-heading-primary) !important;
+      }
+      
+      .tp-order-info-list {
+        ul {
+          .tp-order-info-list-header {
+            background-color: var(--tp-bg-secondary) !important;
+            border-bottom: 1px solid var(--tp-border-primary) !important;
+            
+            h4 {
+              color: var(--tp-heading-primary) !important;
+            }
+          }
+          
+          .tp-order-info-list-desc {
+            border-bottom: 1px solid var(--tp-border-primary) !important;
+            
+            p {
+              color: var(--tp-text-body) !important;
+              
+              span {
+                color: var(--tp-text-3) !important;
+              }
+            }
+            
+            > span {
+              color: var(--tp-theme-primary) !important;
+              font-weight: 600 !important;
+            }
+          }
+          
+          .tp-order-info-list-shipping {
+            border-bottom: 1px solid var(--tp-border-primary) !important;
+            
+            > span {
+              color: var(--tp-heading-primary) !important;
+              font-weight: 600 !important;
+            }
+            
+            .tp-order-info-list-shipping-item {
+              span {
+                label {
+                  color: var(--tp-text-body) !important;
+                  
+                  span {
+                    color: var(--tp-theme-primary) !important;
+                    font-weight: 600 !important;
+                  }
+                  
+                  &::after {
+                    border-color: var(--tp-input-border) !important;
+                  }
+                  
+                  &::before {
+                    background-color: var(--tp-theme-primary) !important;
+                  }
+                }
+                
+                input:checked + label {
+                  &::after {
+                    border-color: var(--tp-theme-primary) !important;
+                  }
+                }
+              }
+            }
+          }
+          
+          .tp-order-info-list-subtotal {
+            border-bottom: 1px solid var(--tp-border-primary) !important;
+            
+            span {
+              color: var(--tp-text-body) !important;
+              
+              &:last-child {
+                color: var(--tp-theme-primary) !important;
+                font-weight: 600 !important;
+              }
+            }
+          }
+          
+          .tp-order-info-list-total {
+            span {
+              color: var(--tp-heading-primary) !important;
+              font-weight: 700 !important;
+              
+              &:last-child {
+                color: var(--tp-theme-primary) !important;
+                font-size: 18px !important;
+              }
+            }
+          }
+        }
+      }
+      
+      // Payment section
+      .tp-checkout-payment {
+        border-bottom: 1px solid var(--tp-border-primary) !important;
+        
+        .tp-checkout-payment-item {
+          label {
+            color: var(--tp-text-body) !important;
+            
+            &::after {
+              border-color: var(--tp-input-border) !important;
+            }
+            
+            &::before {
+              background-color: var(--tp-theme-primary) !important;
+            }
+            
+            img {
+              filter: brightness(0.8) !important; // Slightly darken payment logos for dark theme
+            }
+            
+            a {
+              color: var(--tp-theme-primary) !important;
+              
+              &::after {
+                background-color: var(--tp-theme-primary) !important;
+              }
+            }
+          }
+          
+          input:checked ~ label {
+            &::after {
+              border-color: var(--tp-theme-primary) !important;
+            }
+          }
+          
+          // Stripe payment card element container
+          .direct-bank-transfer {
+            .payment_card {
+              background-color: var(--tp-input-bg) !important;
+              border: 1px solid var(--tp-input-border) !important;
+            }
+          }
+        }
+        
+        .tp-checkout-payment-desc {
+          &::after {
+            background-color: var(--tp-bg-secondary) !important;
+          }
+          
+          p {
+            background-color: var(--tp-bg-secondary) !important;
+            color: var(--tp-text-body) !important;
+            border: 1px solid var(--tp-border-primary) !important;
+          }
+        }
+      }
+      
+      // Checkout button wrapper
+      .tp-checkout-btn-wrapper {
+        .tp-checkout-btn {
+          background-color: var(--tp-theme-primary) !important;
+          color: var(--tp-common-white) !important;
+          border: 1px solid var(--tp-theme-primary) !important;
+          
+          &:hover {
+            background-color: var(--tp-theme-secondary) !important;
+            border-color: var(--tp-theme-secondary) !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 12px rgba(9, 137, 255, 0.3) !important;
+          }
+          
+          &:disabled {
+            background-color: var(--tp-text-3) !important;
+            border-color: var(--tp-text-3) !important;
+            color: var(--tp-text-5) !important;
+            cursor: not-allowed !important;
+            transform: none !important;
+            box-shadow: none !important;
+          }
+        }
+      }
+    }
+    
+    // Checkout agreement/terms
+    .tp-checkout-agree {
+      .tp-checkout-option {
+        label {
+          color: var(--tp-text-body) !important;
+          
+          &::after {
+            border-color: var(--tp-input-border) !important;
+          }
+          
+          &::before {
+            color: var(--tp-common-white) !important;
+          }
+          
+          a {
+            color: var(--tp-theme-primary) !important;
+            
+            &:hover {
+              color: var(--tp-theme-primary) !important;
+            }
+          }
+        }
+        
+        input:checked ~ label {
+          &::after {
+            background-color: var(--tp-theme-primary) !important;
+            border-color: var(--tp-theme-primary) !important;
+          }
+          
+          &::before {
+            visibility: visible !important;
+            opacity: 1 !important;
+          }
+        }
+      }
+    }
+    
+    // Coupon section styling
+    .tp-checkout-coupon {
+      background-color: var(--tp-card-bg) !important;
+      border: 1px solid var(--tp-card-border) !important;
+      
+      .tp-checkout-coupon-input-box {
+        label {
+          color: var(--tp-heading-primary) !important;
+        }
+      }
+      
+      .tp-checkout-coupon-input {
+        input {
+          background-color: var(--tp-input-bg) !important;
+          color: var(--tp-input-text) !important;
+          border: 1px solid var(--tp-input-border) !important;
+          
+          &::placeholder {
+            color: var(--tp-text-3) !important;
+          }
+          
+          &:focus {
+            border-color: var(--tp-input-focus) !important;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1) !important;
+          }
+        }
+        
+        button {
+          background-color: var(--tp-theme-primary) !important;
+          color: var(--tp-common-white) !important;
+          border: 1px solid var(--tp-theme-primary) !important;
+          
+          &:hover {
+            background-color: var(--tp-theme-secondary) !important;
+            border-color: var(--tp-theme-secondary) !important;
+          }
+        }
+      }
+    }
+  }
+  
+  // Error messages for checkout forms
+  .error-msg {
+    color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.1) !important;
+    border: 1px solid rgba(239, 68, 68, 0.2) !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+    margin-top: 4px !important;
+    font-size: 13px !important;
+  }
+  
+  // Success messages for coupon application
+  .coupon-success-msg {
+    color: #10b981 !important;
+    background: rgba(16, 185, 129, 0.1) !important;
+    border: 1px solid rgba(16, 185, 129, 0.2) !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+    margin-top: 8px !important;
+    font-size: 13px !important;
+  }
+  
+  // ============================================
+  // ADDITIONAL CHECKOUT VISUAL ENHANCEMENTS FOR DARK MODE
+  // ============================================
+  
+  // Enhanced spacing and mobile responsiveness
+  .tp-checkout-area {
+    @media (max-width: 767px) {
+      .tp-checkout-bill-area,
+      .tp-checkout-place {
+        margin-bottom: 30px !important;
+        padding: 30px 20px !important;
+      }
+      
+      .tp-checkout-verify-item {
+        margin-bottom: 20px !important;
+      }
+    }
+    
+    // Better visual separation between sections
+    .tp-checkout-verify,
+    .tp-checkout-bill-area,
+    .tp-checkout-place {
+      margin-bottom: 40px !important;
+      
+      @media (max-width: 767px) {
+        margin-bottom: 25px !important;
+      }
+    }
+    
+    // Enhanced focus states for better accessibility
+    input:focus,
+    textarea:focus,
+    select:focus,
+    .nice-select:focus {
+      outline: 2px solid var(--tp-theme-primary) !important;
+      outline-offset: 2px !important;
+    }
+    
+    // Better visual feedback for interactive elements
+    .tp-checkout-payment-item {
+      transition: all 0.2s ease !important;
+      border-radius: 8px !important;
+      padding: 12px !important;
+      margin-bottom: 12px !important;
+      
+      &:hover {
+        background-color: var(--tp-surface-hover) !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+      }
+      
+      label {
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+      }
+    }
+    
+    // Enhanced button states
+    .tp-checkout-btn {
+      transition: all 0.3s ease !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.5px !important;
+      
+      &:not(:disabled) {
+        &:hover {
+          transform: translateY(-2px) !important;
+          box-shadow: 0 6px 20px rgba(9, 137, 255, 0.4) !important;
+        }
+        
+        &:active {
+          transform: translateY(0) !important;
+        }
+      }
+    }
+    
+    // Improved order summary visual hierarchy
+    .tp-order-info-list {
+      ul {
+        li {
+          padding: 12px 0 !important;
+          transition: background-color 0.2s ease !important;
+          
+          &:hover:not(.tp-order-info-list-header):not(.tp-order-info-list-total) {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            border-radius: 4px !important;
+            padding-left: 8px !important;
+            padding-right: 8px !important;
+          }
+        }
+        
+        .tp-order-info-list-total {
+          border-top: 2px solid var(--tp-theme-primary) !important;
+          padding-top: 16px !important;
+          margin-top: 8px !important;
+          background: linear-gradient(135deg, rgba(9, 137, 255, 0.1) 0%, rgba(9, 137, 255, 0.05) 100%) !important;
+          border-radius: 8px !important;
+          padding: 16px 12px !important;
+        }
+      }
+    }
+    
+    // Form validation styling improvements
+    .tp-checkout-input {
+      position: relative !important;
+      
+      input.error,
+      textarea.error {
+        border-color: #ef4444 !important;
+        box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2) !important;
+        animation: shake 0.3s ease-in-out !important;
+      }
+      
+      input.success,
+      textarea.success {
+        border-color: #10b981 !important;
+        box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2) !important;
+      }
+    }
+    
+    // Loading states for better UX
+    .tp-checkout-btn {
+      position: relative !important;
+      
+      &.loading {
+        color: transparent !important;
+        
+        &::after {
+          content: '' !important;
+          position: absolute !important;
+          top: 50% !important;
+          left: 50% !important;
+          width: 20px !important;
+          height: 20px !important;
+          border: 2px solid transparent !important;
+          border-top: 2px solid var(--tp-common-white) !important;
+          border-radius: 50% !important;
+          animation: spin 1s linear infinite !important;
+          transform: translate(-50%, -50%) !important;
+        }
+      }
+    }
+  }
+  
+  // Animations for enhanced UX
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+  
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
+  // High contrast mode support
+  @media (prefers-contrast: high) {
+    .tp-checkout-area {
+      .tp-checkout-bill-area,
+      .tp-checkout-place {
+        border-width: 2px !important;
+      }
+      
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline-width: 3px !important;
+      }
+      
+      .tp-checkout-btn {
+        border-width: 2px !important;
+        font-weight: 700 !important;
+      }
+    }
+  }
+  
+  // Reduced motion support
+  @media (prefers-reduced-motion: reduce) {
+    .tp-checkout-area {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  }
+
+  // ============================================
+  // PROFILE & MY ORDERS PAGE DARK MODE STYLES
+  // ============================================
+  
+  // Profile page navigation tabs
+  .profile__tab {
+    .nav-tabs {
+      background-color: var(--tp-surface) !important;
+      border: 1px solid var(--tp-border-primary) !important;
+      box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3) !important;
+      
+      .nav-link {
+        color: var(--tp-text-body) !important;
+        background-color: var(--tp-surface) !important;
+        
+        &:hover {
+          background-color: var(--tp-surface-hover) !important;
+          color: var(--tp-text-body) !important;
+        }
+        
+        &.active {
+          color: var(--tp-theme-primary) !important;
+          background-color: rgba(9, 137, 255, 0.1) !important;
+          
+          &:hover {
+            background-color: rgba(9, 137, 255, 0.1) !important;
+          }
+        }
+      }
+    }
+    
+    &-content {
+      background-color: var(--tp-surface) !important;
+      border: 1px solid var(--tp-border-primary) !important;
+      box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.3) !important;
+    }
+  }
+  
+  // Profile information section
+  .profile__info {
+    &-title {
+      color: var(--tp-heading-primary) !important;
+    }
+  }
+  
+  // Profile input fields
+  .profile__input {
+    &-box {
+      h4 {
+        color: var(--tp-heading-primary) !important;
+        
+        span {
+          color: var(--tp-theme-primary) !important;
+        }
+      }
+      
+      p {
+        color: var(--tp-text-body) !important;
+        opacity: 0.7 !important;
+      }
+    }
+    
+    input,
+    textarea {
+      background-color: var(--tp-input-bg) !important;
+      color: var(--tp-input-text) !important;
+      border: 1px solid var(--tp-input-border) !important;
+      
+      &:focus {
+        border-color: var(--tp-theme-primary) !important;
+        box-shadow: 0 0 0 2px rgba(9, 137, 255, 0.1) !important;
+      }
+    }
+    
+    .nice-select {
+      background-color: var(--tp-input-bg) !important;
+      color: var(--tp-input-text) !important;
+      border: 1px solid var(--tp-input-border) !important;
+      
+      .current {
+        color: var(--tp-input-text) !important;
+      }
+      
+      &::after {
+        color: var(--tp-text-3) !important;
+      }
+      
+      .list {
+        background-color: var(--tp-surface) !important;
+        border: 1px solid var(--tp-border-primary) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+        
+        .option {
+          color: var(--tp-text-body) !important;
+          
+          &:hover {
+            color: var(--tp-heading-primary) !important;
+            background-color: var(--tp-surface-hover) !important;
+          }
+        }
+      }
+    }
+  }
+  
+  // MY ORDERS TABLE - DARK MODE FIX
+  .profile__ticket {
+    background-color: var(--tp-surface) !important;
+    border: 1px solid var(--tp-border-primary) !important;
+    
+    .table {
+      background-color: var(--tp-surface) !important;
+      margin-bottom: 0 !important;
+      
+      // Table header
+      thead {
+        tr {
+          background-color: var(--tp-bg-secondary) !important;
+          
+          th {
+            color: var(--tp-heading-primary) !important;
+            border-color: var(--tp-border-primary) !important;
+            background-color: var(--tp-bg-secondary) !important;
+            font-weight: 600 !important;
+            padding: 15px 20px !important;
+          }
+        }
+      }
+      
+      // Table body
+      tbody {
+        tr {
+          background-color: var(--tp-surface) !important;
+          
+          &:hover {
+            background-color: var(--tp-surface-hover) !important;
+          }
+          
+          &:not(:last-child) {
+            border-bottom: 1px solid var(--tp-border-primary) !important;
+          }
+          
+          td,
+          th {
+            color: var(--tp-text-body) !important;
+            border-color: var(--tp-border-primary) !important;
+            padding: 15px 20px !important;
+            vertical-align: middle !important;
+            
+            // Order ID styling
+            &[scope="row"] {
+              color: var(--tp-theme-primary) !important;
+              font-weight: 600 !important;
+            }
+          }
+          
+          // Status colors for different order statuses
+          td[data-info*="status done"],
+          td.status.done {
+            color: #10b981 !important;
+            font-weight: 600 !important;
+          }
+          
+          td[data-info*="status pending"],
+          td.status.pending {
+            color: #f59e0b !important;
+            font-weight: 600 !important;
+          }
+          
+          td[data-info*="status reply"] {
+            color: #ef4444 !important;
+            font-weight: 600 !important;
+          }
+          
+          td[data-info*="status hold"],
+          td.status.hold {
+            color: #f59e0b !important;
+            font-weight: 600 !important;
+          }
+        }
+      }
+    }
+    
+    // Ensure table is properly styled
+    .table > :not(:first-child) {
+      border-color: var(--tp-border-primary) !important;
+      border-top-width: 1px !important;
+    }
+    
+    .table > :not(caption) > * > * {
+      padding: 15px 20px !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+  }
+  
+  // Invoice/View buttons
+  .tp-logout-btn {
+    background-color: var(--tp-input-bg) !important;
+    color: var(--tp-text-body) !important;
+    border: 1px solid var(--tp-input-border) !important;
+    transition: all 0.3s ease !important;
+    
+    &:hover {
+      background-color: var(--tp-theme-primary) !important;
+      border-color: var(--tp-theme-primary) !important;
+      color: var(--tp-common-white) !important;
+      transform: translateY(-1px) !important;
+    }
+  }
+  
+  // Profile main section
+  .profile__main {
+    &-title {
+      color: var(--tp-heading-primary) !important;
+    }
+    
+    &-content {
+      p {
+        color: var(--tp-text-body) !important;
+        
+        span {
+          color: var(--tp-theme-primary) !important;
+        }
+      }
+    }
+    
+    &-info {
+      &-item {
+        background-color: var(--tp-card-bg) !important;
+        border: 1px solid var(--tp-card-border) !important;
+        
+        &:hover {
+          background-color: var(--tp-card-hover) !important;
+          border-color: var(--tp-border-secondary) !important;
+        }
+      }
+      
+      &-title {
+        color: var(--tp-heading-primary) !important;
+      }
+      
+      &-icon {
+        span {
+          svg {
+            path {
+              fill: var(--tp-text-body) !important;
+            }
+          }
+        }
+        
+        .profile-icon-count {
+          background-color: var(--tp-theme-primary) !important;
+          color: var(--tp-common-white) !important;
+          border: 2px solid var(--tp-surface) !important;
+        }
+      }
+    }
+  }
+  
+  // Profile address section
+  .profile__address {
+    &-title {
+      color: var(--tp-heading-primary) !important;
+    }
+    
+    &-content {
+      p {
+        color: var(--tp-text-body) !important;
+        
+        span {
+          color: var(--tp-heading-primary) !important;
+        }
+      }
+    }
+    
+    &-icon {
+      span {
+        svg {
+          path {
+            fill: var(--tp-theme-primary) !important;
+          }
+        }
+      }
+    }
+  }
+  
+  // Profile notification section
+  .profile__notification {
+    &-title {
+      color: var(--tp-heading-primary) !important;
+    }
+    
+    &-item {
+      .form-check-input {
+        background-color: var(--tp-input-bg) !important;
+        border: 1px solid var(--tp-input-border) !important;
+        
+        &:focus {
+          border-color: var(--tp-theme-primary) !important;
+          box-shadow: 0 0 0 2px rgba(9, 137, 255, 0.1) !important;
+        }
+        
+        &:checked {
+          background-color: var(--tp-theme-primary) !important;
+          border-color: var(--tp-theme-primary) !important;
+        }
+      }
+      
+      .form-check-label {
+        color: var(--tp-text-body) !important;
+        
+        &:hover {
+          color: var(--tp-heading-primary) !important;
+        }
+      }
+    }
+  }
+  
+  // Profile picture upload section
+  .profile__main-thumb {
+    &-edit {
+      label {
+        background-color: var(--tp-theme-primary) !important;
+        color: var(--tp-common-white) !important;
+        border: 2px solid var(--tp-surface) !important;
+        
+        &:hover {
+          background-color: var(--tp-heading-primary) !important;
+          color: var(--tp-common-white) !important;
+        }
+      }
+    }
+  }
+  
+  // Profile buttons
+  .profile__btn {
+    .tp-btn {
+      background-color: var(--tp-theme-primary) !important;
+      color: var(--tp-common-white) !important;
+      border: 1px solid var(--tp-theme-primary) !important;
+      
+      &:hover {
+        background-color: var(--tp-theme-secondary) !important;
+        border-color: var(--tp-theme-secondary) !important;
+        transform: translateY(-1px) !important;
+      }
+    }
+  }
+  
+  // Profile input wrapper for floating labels
+  .tp-profile-input {
+    &-box {
+      .tp-profile-input-title {
+        label {
+          color: var(--tp-heading-primary) !important;
+          background-color: var(--tp-surface) !important;
+        }
+      }
+      
+      &-eye {
+        span {
+          color: var(--tp-text-3) !important;
+          
+          &:hover {
+            color: var(--tp-heading-primary) !important;
+          }
+        }
+      }
+    }
+    
+    input,
+    textarea {
+      background-color: var(--tp-input-bg) !important;
+      color: var(--tp-input-text) !important;
+      border: 1px solid var(--tp-input-border) !important;
+      
+      &:focus {
+        border-color: var(--tp-theme-primary) !important;
+        box-shadow: 0 0 0 2px rgba(9, 137, 255, 0.1) !important;
+      }
+    }
+  }
+}
+
+// Smooth transitions for all elements
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

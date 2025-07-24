@@ -1,0 +1,148 @@
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'typography' as *;
+
+:root {
+    /**
+    @font family declaration
+    */
+    @each $ff, $shades in $font-family {
+        @each $shade, $value in $shades {
+            --tp-#{$ff}-#{$shade}: #{$value};
+        }
+    }
+
+    /**
+    @color declaration
+    */
+    @each $color, $shades in $colors {
+        @each $shade, $value in $shades {
+            --tp-#{$color}-#{$shade}: #{$value};
+        }
+    }
+
+}
+
+// Dark Theme Variables
+.theme-dark {
+    // Background colors
+    --tp-common-white: #0f172a;
+    --tp-common-black: #f8fafc;
+    --tp-common-black-solid: #ffffff;
+    
+    // Heading colors
+    --tp-heading-primary: #f8fafc;
+    --tp-heading-secondary: #e2e8f0;
+    
+    // Text colors
+    --tp-text-body: #cbd5e0;
+    --tp-text-1: #94a3b8;
+    --tp-text-2: #cbd5e0;
+    --tp-text-3: #64748b;
+    --tp-text-4: #94a3b8;
+    --tp-text-5: #94a3b8;
+    --tp-text-6: #8b8b8b;
+    
+    // Grey colors for dark theme
+    --tp-grey-1: #1e293b;
+    --tp-grey-2: #1a1a1a;
+    --tp-grey-3: #334155;
+    --tp-grey-4: #1e293b;
+    --tp-grey-5: #1a1a1a;
+    --tp-grey-6: #334155;
+    --tp-grey-7: #0f172a;
+    --tp-grey-8: #334155;
+    --tp-grey-9: #334155;
+    
+    // Border colors
+    --tp-border-primary: #334155;
+    --tp-border-secondary: #475569;
+    --tp-border-3: #475569;
+    --tp-border-4: #475569;
+    
+    // Footer
+    --tp-footer-grey-1: #0f172a;
+    
+    // Theme specific dark mode enhancements
+    --tp-bg-primary: #0f172a;
+    --tp-bg-secondary: #1e293b;
+    --tp-bg-tertiary: #334155;
+    --tp-surface: #1e293b;
+    --tp-surface-hover: #334155;
+    
+    // Card and component backgrounds
+    --tp-card-bg: #1e293b;
+    --tp-card-border: #334155;
+    --tp-card-hover: #334155;
+    
+    // Input and form colors
+    --tp-input-bg: #1e293b;
+    --tp-input-border: #334155;
+    --tp-input-focus: #475569;
+    --tp-input-text: #f8fafc;
+    
+    // Button colors
+    --tp-btn-bg: #1e293b;
+    --tp-btn-border: #334155;
+    --tp-btn-hover: #334155;
+    --tp-btn-text: #f8fafc;
+    
+    // Enhanced shadows for dark mode
+    --tp-shadow-light: rgba(0, 0, 0, 0.1);
+    --tp-shadow-medium: rgba(0, 0, 0, 0.4);
+    --tp-shadow-heavy: rgba(0, 0, 0, 0.6);
+    
+    // Product and ecommerce specific
+    --tp-product-bg: #1e293b;
+    --tp-product-border: #334155;
+    --tp-product-hover: #334155;
+    --tp-price-color: #f8fafc;
+    --tp-rating-color: #fbbf24;
+}
+
+// Light Theme Variables (explicit for consistency)
+.theme-light {
+    // Reset to original light theme values
+    --tp-common-white: #ffffff;
+    --tp-common-black: #010F1C;
+    --tp-common-black-solid: #000;
+    
+    --tp-heading-primary: #010F1C;
+    --tp-heading-secondary: #021D35;
+    
+    --tp-text-body: #55585B;
+    --tp-text-1: #767A7D;
+    --tp-text-2: #55585B;
+    --tp-text-3: #A0A2A4;
+    --tp-text-4: #7D7F82;
+    --tp-text-5: #888A8C;
+    --tp-text-6: #90969B;
+    
+    --tp-grey-1: #F6F7F9;
+    --tp-grey-2: #ECF2F7;
+    --tp-grey-3: #CAD4DB;
+    --tp-grey-4: #F8F8F8;
+    --tp-grey-5: #EFF0ED;
+    --tp-grey-6: #EFF1F5;
+    --tp-grey-7: #F6F6F6;
+    --tp-grey-8: #EAE4DE;
+    --tp-grey-9: #E5E9F2;
+    
+    --tp-border-primary: #EAEBED;
+    --tp-border-secondary: #F0F2F4;
+    --tp-border-3: #E4E5E9;
+    --tp-border-4: #E6E7E8;
+    
+    --tp-footer-grey-1: #F4F7F9;
+    
+    // Light theme specific
+    --tp-bg-primary: #ffffff;
+    --tp-bg-secondary: #f9fafb;
+    --tp-bg-tertiary: #f3f4f6;
+    --tp-surface: #ffffff;
+    --tp-surface-hover: #f9fafb;
+    
+    --tp-shadow-light: rgba(0, 0, 0, 0.05);
+    --tp-shadow-medium: rgba(0, 0, 0, 0.1);
+    --tp-shadow-heavy: rgba(0, 0, 0, 0.25);
+}

@@ -1,0 +1,153 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  Responsive Logo Component
+/*----------------------------------------*/
+
+.responsive-logo {
+  transition: all 0.3s ease;
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  
+  // Default logo size - desktop first
+  max-height: 150px;
+  
+  // Responsive sizes for different breakpoints - decreasing from desktop
+  @media #{$xxl} {
+    max-height: 150px;
+  }
+  
+  @media #{$xl} {
+    max-height: 140px;
+  }
+  
+  @media #{$lg} {
+    max-height: 120px;
+  }
+  
+  @media #{$md} {
+    max-height: 100px;
+  }
+  
+  @media #{$sm} {
+    max-height: 80px;
+  }
+  
+  @media #{$xs} {
+    max-height: 60px;
+  }
+  
+  // Clip path to remove extra whitespace from logo
+  clip-path: inset(15% 0 15% 0);
+  
+  // Ensure smooth transitions for theme changes
+  img {
+    transition: opacity 0.3s ease;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+// Logo container responsive styles
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  
+  a {
+    display: block;
+    line-height: 1;
+  }
+  
+  // Header specific logo styles
+  .tp-header-main & {
+    @media #{$lg} {
+      margin-right: 20px;
+    }
+    
+    @media #{$md} {
+      margin-right: 15px;
+    }
+    
+    @media #{$sm} {
+      margin-right: 10px;
+    }
+  }
+  
+  // Footer specific logo styles  
+  .tp-footer-logo & {
+    margin-bottom: 20px;
+    
+    @media #{$md} {
+      margin-bottom: 15px;
+    }
+    
+    @media #{$sm} {
+      margin-bottom: 10px;
+    }
+  }
+  
+  // Sticky header logo adjustments - optimized for sticky header
+  .tp-header-sticky &,
+  .header-sticky &,
+  .header-sticky-2 &,
+  .tp-header-sticky-area & {
+    .responsive-logo {
+      max-height: 70px;
+      
+      @media #{$xl} {
+        max-height: 65px;
+      }
+      
+      @media #{$lg} {
+        max-height: 60px;
+      }
+      
+      @media #{$md} {
+        max-height: 50px;
+      }
+      
+      @media #{$sm} {
+        max-height: 45px;
+      }
+      
+      @media #{$xs} {
+        max-height: 40px;
+      }
+    }
+  }
+}
+
+// Dark mode specific logo styles
+[data-theme="dark"] {
+  .responsive-logo {
+    // Ensure proper contrast in dark mode
+    filter: brightness(1.1);
+  }
+}
+
+// Light mode specific logo styles
+[data-theme="light"] {
+  .responsive-logo {
+    // Ensure proper contrast in light mode
+    filter: brightness(1);
+  }
+}
+
+// Logo hover effects (optional enhancement)
+.logo a:hover .responsive-logo {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+// Print media logo styles
+@media print {
+  .responsive-logo {
+    max-height: 40px;
+    filter: grayscale(100%);
+  }
+}

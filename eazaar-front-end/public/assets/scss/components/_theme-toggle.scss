@@ -1,0 +1,436 @@
+// ============================================
+// Theme Toggle Component - 2025 Ultra Modern Design
+// ============================================
+
+// Header integration styling - theme toggle now uses tp-header-action-btn class
+.tp-header-action-item {
+  .theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+.theme-toggle-btn {
+  position: relative;
+  width: 64px;
+  height: 32px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  // Inherit header action button base styles
+  &.tp-header-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    
+    // Responsive behavior
+    @media (max-width: 991px) {
+      width: 48px;
+      height: 24px;
+    }
+    
+    @media (max-width: 575px) {
+      width: 40px;
+      height: 20px;
+    }
+  }
+  
+  &:focus {
+    outline: 2px solid var(--tp-theme-primary);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.15));
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.theme-toggle-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.2) 0%, 
+      rgba(255, 255, 255, 0.1) 50%, 
+      rgba(255, 255, 255, 0.05) 100%);
+    border-radius: 20px;
+    transition: opacity 0.3s ease;
+  }
+
+  // Light theme track styling
+  .theme-toggle-btn.light & {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    border: 1px solid rgba(252, 182, 159, 0.3);
+    box-shadow: 
+      inset 0 2px 4px rgba(0, 0, 0, 0.05),
+      0 4px 12px rgba(252, 182, 159, 0.3);
+  }
+
+  // Dark theme track styling
+  .theme-toggle-btn.dark & {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 
+      inset 0 2px 4px rgba(0, 0, 0, 0.3),
+      0 4px 12px rgba(26, 32, 44, 0.6);
+  }
+  
+  // Responsive track adjustments
+  .theme-toggle-btn.tp-header-action-btn & {
+    @media (max-width: 991px) {
+      width: 46px;
+      height: 22px;
+      border-radius: 12px;
+    }
+    
+    @media (max-width: 575px) {
+      width: 38px;
+      height: 18px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.theme-toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 50%;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  // Animation keyframes for smooth sliding
+  .theme-toggle-btn.light & {
+    transform: translateX(0);
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 
+      0 2px 8px rgba(0, 0, 0, 0.15),
+      0 4px 16px rgba(252, 182, 159, 0.2);
+  }
+
+  .theme-toggle-btn.dark & {
+    transform: translateX(32px);
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 
+      0 2px 8px rgba(0, 0, 0, 0.4),
+      0 4px 16px rgba(45, 55, 72, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  // Hover effects
+  .theme-toggle-btn:hover & {
+    box-shadow: 
+      0 4px 16px rgba(0, 0, 0, 0.2),
+      0 8px 32px rgba(0, 0, 0, 0.15);
+  }
+  
+  // Responsive adjustments
+  .theme-toggle-btn.tp-header-action-btn & {
+    @media (max-width: 991px) {
+      width: 18px;
+      height: 18px;
+      top: 1px;
+      left: 1px;
+    }
+    
+    @media (max-width: 575px) {
+      width: 14px;
+      height: 14px;
+      top: 1px;
+      left: 1px;
+    }
+  }
+  
+  // Responsive dark mode positioning
+  .theme-toggle-btn.tp-header-action-btn.dark & {
+    @media (max-width: 991px) {
+      transform: translateX(26px);
+    }
+    
+    @media (max-width: 575px) {
+      transform: translateX(22px);
+    }
+  }
+}
+
+.theme-toggle-icon-container {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  // Responsive icon container adjustments
+  .theme-toggle-btn.tp-header-action-btn & {
+    @media (max-width: 991px) {
+      width: 16px;
+      height: 16px;
+    }
+    
+    @media (max-width: 575px) {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+.theme-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  scale: 0.5;
+
+  &.active {
+    opacity: 1;
+    scale: 1;
+  }
+  
+  // Responsive icon adjustments
+  .theme-toggle-btn.tp-header-action-btn & {
+    @media (max-width: 991px) {
+      width: 12px;
+      height: 12px;
+    }
+    
+    @media (max-width: 575px) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.sun-icon {
+  color: #f59e0b;
+  
+  .theme-toggle-btn.light & {
+    color: #f59e0b;
+    animation: sunRotate 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.4));
+  }
+
+  // Sun rays animation
+  .sun-rays {
+    transform-origin: center;
+    animation: sunRaysGlow 2s ease-in-out infinite alternate;
+  }
+
+  .sun-circle {
+    transform-origin: center;
+    animation: sunPulse 2s ease-in-out infinite alternate;
+  }
+}
+
+.moon-icon {
+  color: #cbd5e0;
+  
+  .theme-toggle-btn.dark & {
+    color: #e2e8f0;
+    animation: moonSlide 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 0 6px rgba(226, 232, 240, 0.3));
+  }
+
+  .moon-path {
+    animation: moonGlow 3s ease-in-out infinite alternate;
+  }
+}
+
+// Advanced keyframe animations
+@keyframes sunRotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(-180deg) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg) scale(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes moonSlide {
+  0% {
+    transform: translate(-50%, -50%) translateY(10px) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(5px) scale(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes sunRaysGlow {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes sunPulse {
+  0% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes moonGlow {
+  0% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px rgba(232, 234, 237, 0.3));
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(232, 234, 237, 0.5));
+  }
+}
+
+// Mobile offcanvas specific styling
+.offcanvas__theme-toggle {
+  .theme-toggle-btn {
+    width: 56px;
+    height: 28px;
+  }
+
+  .theme-toggle-slider {
+    width: 24px;
+    height: 24px;
+    
+    .theme-toggle-btn.dark & {
+      transform: translateX(28px);
+    }
+  }
+
+  .theme-icon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+// Responsive design
+@media (max-width: 991.98px) {
+  .theme-toggle-btn {
+    width: 56px;
+    height: 28px;
+  }
+
+  .theme-toggle-slider {
+    width: 24px;
+    height: 24px;
+    
+    .theme-toggle-btn.dark & {
+      transform: translateX(28px);
+    }
+  }
+
+  .theme-icon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .theme-toggle-btn {
+    width: 48px;
+    height: 24px;
+  }
+
+  .theme-toggle-slider {
+    width: 20px;
+    height: 20px;
+    
+    .theme-toggle-btn.dark & {
+      transform: translateX(24px);
+    }
+  }
+
+  .theme-icon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+// High contrast mode accessibility
+@media (prefers-contrast: high) {
+  .theme-toggle-track {
+    border: 2px solid currentColor;
+  }
+  
+  .theme-toggle-slider {
+    border: 1px solid currentColor;
+  }
+}
+
+// Reduced motion accessibility
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle-btn,
+  .theme-toggle-track,
+  .theme-toggle-slider,
+  .theme-icon {
+    transition: none !important;
+    animation: none !important;
+  }
+}

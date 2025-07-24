@@ -1,0 +1,760 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap'); */
+/* @import url("../../public/assets/css/perfect-scrollbar.css"); */
+
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
+ /* Enhanced Admin Panel Styles */
+ @layer components {
+   .admin-gradient {
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+   }
+   
+   .admin-card {
+     @apply bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 transition-all duration-200 hover:shadow-md;
+   }
+   
+   .admin-button-primary {
+     @apply bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium px-6 py-2.5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 active:scale-95;
+   }
+   
+   .admin-button-secondary {
+     @apply bg-white dark:bg-slate-700 border-2 border-gray-300 dark:border-slate-600 hover:border-gray-400 dark:hover:border-slate-500 text-gray-700 dark:text-white font-medium px-6 py-2.5 rounded-lg transition-all duration-200 hover:shadow-md;
+   }
+   
+   .admin-input {
+     @apply w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-slate-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200;
+   }
+   
+   .admin-sidebar {
+     @apply bg-white dark:bg-slate-800 border-r border-gray-200 dark:border-slate-700 transition-all duration-300;
+   }
+   
+   .admin-sidebar-item {
+     @apply flex items-center px-4 py-3 text-gray-700 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all duration-200 cursor-pointer;
+   }
+   
+   .admin-sidebar-item.active {
+     @apply bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 border-r-2 border-blue-600;
+   }
+   
+   .admin-header {
+     @apply bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700 px-6 py-4;
+   }
+   
+   .admin-content {
+     @apply bg-gray-50 dark:bg-slate-900 min-h-screen p-6;
+   }
+   
+   .admin-table {
+     @apply w-full bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 overflow-hidden;
+   }
+   
+   .admin-table-header {
+     @apply bg-gray-50 dark:bg-slate-700 px-6 py-4 border-b border-gray-200 dark:border-slate-600;
+   }
+   
+   .admin-table-row {
+     @apply px-6 py-4 border-b border-gray-200 dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors duration-200;
+   }
+   
+   .admin-badge {
+     @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+   }
+   
+   .admin-badge-success {
+     @apply bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400;
+   }
+   
+   .admin-badge-warning {
+     @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400;
+   }
+   
+   .admin-badge-error {
+     @apply bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400;
+   }
+   
+   .admin-badge-info {
+     @apply bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400;
+   }
+   
+   .admin-form-section {
+     @apply space-y-6 p-6 bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700;
+   }
+   
+   .admin-form-group {
+     @apply space-y-2;
+   }
+   
+   .admin-label {
+     @apply block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2;
+   }
+   
+   .admin-help-text {
+     @apply text-xs text-gray-500 dark:text-slate-400 mt-1;
+   }
+   
+   .admin-divider {
+     @apply border-t border-gray-200 dark:border-slate-700 my-6;
+   }
+   
+   .admin-section-title {
+     @apply text-lg font-semibold text-gray-900 dark:text-white mb-4;
+   }
+   
+   .admin-section-subtitle {
+     @apply text-sm text-gray-600 dark:text-slate-400 mb-6;
+   }
+ }
+
+ @layer base {
+     html, body {
+         font-family: 'Poppins', sans-serif;
+         font-size: 14px;
+         line-height: 26px;
+         color: #55585B;
+    }
+    
+    /* Dark mode styles */
+    .dark {
+        color-scheme: dark;
+    }
+    
+    .dark body {
+        @apply bg-slate-900 text-white;
+    }
+    
+    .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+        @apply text-white;
+    }
+    
+    .dark p {
+        @apply text-slate-300;
+    }
+    
+    /* Additional dark mode component styles */
+    .dark .input {
+        @apply bg-slate-700 border-slate-600 text-white;
+    }
+    
+    .dark .input:focus {
+        @apply border-theme bg-slate-700;
+    }
+    
+    .dark .tp-btn {
+        @apply bg-theme hover:bg-themeDark;
+    }
+    
+    /* Sidebar active states for dark mode */
+    .dark .sidebar-link-active.active {
+        @apply bg-slate-700 text-theme;
+    }
+    
+    .dark .sidebar-link-active:hover {
+        @apply bg-slate-700;
+    }
+    
+    /* Comprehensive dark mode for all components - using specific selectors to avoid circular dependencies */
+    
+    /* Fix white backgrounds in dark mode */
+    .dark div[class*="bg-white"],
+    .dark section[class*="bg-white"],
+    .dark article[class*="bg-white"],
+    .dark aside[class*="bg-white"] {
+        background-color: rgb(30 41 59) !important; /* slate-800 */
+    }
+    
+    /* Common component backgrounds */
+    .dark .bg-white {
+        background-color: rgb(30 41 59) !important; /* slate-800 */
+    }
+    
+    /* Remove the aggressive universal rule */
+    
+    .dark *[style*="background-color: white"],
+    .dark *[style*="background-color: #fff"],
+    .dark *[style*="background-color: #ffffff"],
+    .dark *[style*="background: white"],
+    .dark *[style*="background: #fff"],
+    .dark *[style*="background: #ffffff"] {
+        background-color: rgb(30 41 59) !important; /* slate-800 */
+    }
+    
+    .dark .text-black {
+        color: rgb(255 255 255); /* white */
+    }
+    
+    .dark .text-gray-600 {
+        color: rgb(203 213 225); /* slate-300 */
+    }
+    
+    .dark .text-gray-700 {
+        color: rgb(226 232 240); /* slate-200 */
+    }
+    
+    .dark .text-gray-800 {
+        color: rgb(241 245 249); /* slate-100 */
+    }
+    
+    .dark .text-gray-900 {
+        color: rgb(255 255 255); /* white */
+    }
+    
+    .dark .border-gray {
+        border-color: rgb(71 85 105); /* slate-600 */
+    }
+    
+    .dark .border-gray-200 {
+        border-color: rgb(71 85 105); /* slate-600 */
+    }
+    
+    .dark .border-gray-300 {
+        border-color: rgb(100 116 139); /* slate-500 */
+    }
+    
+    /* Fix unwanted borders and lines in dark mode */
+    .dark .border,
+    .dark [class*="border-"] {
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Remove visible borders that shouldn't be there */
+    .dark .border-0 {
+        border: none !important;
+    }
+    
+    /* Card and container border fixes */
+    .dark .card,
+    .dark .widget-item,
+    .dark .panel {
+        border: 1px solid rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Remove unwanted divider lines */
+    .dark hr,
+    .dark .divider,
+    .dark .separator {
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+        background-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Fix white borders and outlines */
+    .dark *[style*="border: 1px solid white"],
+    .dark *[style*="border: 1px solid #fff"],
+    .dark *[style*="border-color: white"],
+    .dark *[style*="border-color: #fff"] {
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Tags and category hover fixes - PROPER VERSION */
+    .dark .tag,
+    .dark .badge:not(.text-success):not(.text-warning):not(.text-danger):not(.text-info),
+    .dark .chip,
+    .dark .category-item {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+        color: rgb(226 232 240) !important; /* slate-200 */
+        border: 1px solid rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    .dark .tag:hover,
+    .dark .badge:not(.text-success):not(.text-warning):not(.text-danger):not(.text-info):hover,
+    .dark .chip:hover,
+    .dark .category-item:hover {
+        background-color: rgb(71 85 105) !important; /* slate-600 */
+        color: rgb(255 255 255) !important; /* white */
+    }
+    
+    /* Product Category ListItem hover styles for dark mode */
+    .dark [data-selected="false"]:hover,
+    .dark .MuiListItem-root:hover,
+    .dark .MuiAccordionSummary-root:hover {
+        background-color: rgb(71 85 105) !important; /* slate-700 */
+        color: rgb(255 255 255) !important; /* white */
+    }
+    
+    /* Tags Input Dark Mode Styles - Keep input white, only style tags */
+    .dark .tp-product-tags .rti--container,
+    .dark .rti--container {
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    .dark .tp-product-tags .rti--input,
+    .dark .rti--input {
+        background-color: white !important; /* Keep input white */
+        color: rgb(16 15 28) !important; /* Keep text black */
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    .dark .tp-product-tags .rti--input:focus,
+    .dark .rti--input:focus {
+        border-color: #0989FF !important; /* theme color */
+        background-color: white !important; /* Keep input white on focus */
+        color: rgb(16 15 28) !important; /* Keep text black on focus */
+    }
+    
+    .dark .tp-product-tags .rti--tag,
+    .dark .rti--tag {
+        background-color: rgb(71 85 105) !important; /* slate-600 */
+        color: rgb(255 255 255) !important; /* white */
+    }
+    
+    .dark .tags-input-wrapper .tag {
+        background-color: rgb(71 85 105) !important; /* slate-600 */
+        color: rgb(255 255 255) !important; /* white */
+    }
+    
+    /* Cards and containers - specific selectors for dark mode */
+    .dark .widget-item,
+    .dark .card,
+    .dark .panel,
+    .dark .container,
+    .dark [class*="bg-white"],
+    .dark .table-container,
+    .dark .form-container,
+    .dark .modal-content,
+    .dark .dropdown-menu {
+        background-color: rgb(30 41 59) !important; /* slate-800 */
+    }
+    
+    .dark .shadow-sm,
+    .dark .shadow,
+    .dark .shadow-md,
+    .dark .shadow-lg {
+        box-shadow: 0 10px 15px -3px rgba(15 23 42 / 0.5), 0 4px 6px -2px rgba(15 23 42 / 0.5);
+    }
+    
+    /* Tables */
+    .dark table {
+        background-color: rgb(30 41 59) !important; /* slate-800 */
+    }
+    
+    .dark th {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+        color: rgb(226 232 240) !important; /* slate-200 */
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    .dark td {
+        background-color: rgb(30 41 59) !important; /* slate-800 */
+        color: rgb(226 232 240) !important; /* slate-200 */
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    .dark tr:hover {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+    }
+    
+    /* Forms - ONLY for dark mode, don't affect light mode */
+    
+    /* Select dropdown options and menus */
+    .dark select option {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+        color: rgb(255 255 255) !important; /* white */
+    }
+    
+    /* Dropdown menus that appear when clicking selects - AGGRESSIVE FIX */
+    .dark select,
+    .dark .select-dropdown,
+    .dark .dropdown-content,
+    .dark .select-options,
+    .dark .option-list,
+    .dark select[size],
+    .dark select[multiple] {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+        color: rgb(255 255 255) !important; /* white */
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Force all select-related elements to dark */
+    .dark select *,
+    .dark option,
+    .dark optgroup {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+        color: rgb(255 255 255) !important; /* white */
+    }
+    
+    /* For custom select components */
+    .dark .react-select__menu,
+    .dark .react-select__menu-list,
+    .dark .react-select__option {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+        color: rgb(255 255 255) !important; /* white */
+    }
+    
+    .dark .react-select__option:hover,
+    .dark .react-select__option--is-focused {
+        background-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Material-UI or other dropdown libraries */
+    .dark .MuiPaper-root,
+    .dark .MuiMenu-paper,
+    .dark .MuiSelect-paper {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+    }
+    
+    .dark .MuiMenuItem-root {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+        color: rgb(255 255 255) !important; /* white */
+    }
+    
+    .dark .MuiMenuItem-root:hover {
+        background-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* NUCLEAR OPTION - Force ANY dropdown to be dark */
+    .dark *[role="listbox"],
+    .dark *[role="option"],
+    .dark *[role="combobox"],
+    .dark .dropdown,
+    .dark .dropdown-menu,
+    .dark .select2-dropdown,
+    .dark .choices__list,
+    .dark .choices__item {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+        color: rgb(255 255 255) !important; /* white */
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Override browser default select styling */
+    .dark select::-webkit-scrollbar {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+    }
+    
+    .dark select::-webkit-scrollbar-thumb {
+        background-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Clean input styling ONLY for dark mode */
+    html.dark input,
+    html.dark textarea,
+    html.dark select,
+    html.dark [contenteditable="true"] {
+        background-color: rgb(255 255 255) !important;
+        color: rgb(0 0 0) !important;
+        border-color: rgb(71 85 105) !important;
+        caret-color: rgb(0 0 0) !important;
+    }
+    
+    html.dark input:focus,
+    html.dark textarea:focus,
+    html.dark select:focus,
+    html.dark [contenteditable="true"]:focus {
+        background-color: rgb(255 255 255) !important;
+        color: rgb(0 0 0) !important;
+        border-color: #0989FF !important;
+        caret-color: #0989FF !important;
+        box-shadow: 0 0 0 3px rgba(9, 137, 255, 0.1) !important;
+    }
+    
+    html.dark input::placeholder,
+    html.dark textarea::placeholder {
+        color: rgb(107 114 128) !important;
+    }
+    
+    /* Dropdown arrow cursor */
+    .dark select {
+        cursor: pointer !important;
+    }
+    
+    /* Modals and dropdowns */
+    .dark .modal,
+    .dark .dropdown {
+        background-color: rgb(30 41 59) !important; /* slate-800 */
+        border-color: rgb(51 65 85) !important; /* slate-700 */
+    }
+    
+    /* Badges and status indicators */
+    .dark .badge {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+        color: rgb(226 232 240) !important; /* slate-200 */
+    }
+    
+    /* Charts and data visualization */
+    .dark .chart-container {
+        background-color: rgb(30 41 59) !important; /* slate-800 */
+    }
+    
+    /* Additional white background fixes */
+    .dark .widget-item,
+    .dark .card-body,
+    .dark .panel-body,
+    .dark .content-area,
+    .dark .main-content,
+    .dark .section,
+    .dark .wrapper,
+    .dark .form-group,
+    .dark .input-group,
+    .dark .select-wrapper,
+    .dark .dropdown-item,
+    .dark .list-item,
+    .dark .menu-item {
+        background-color: rgb(30 41 59) !important; /* slate-800 */
+    }
+    
+    /* Force all white backgrounds to dark */
+    .dark [class*="bg-white"],
+    .dark [style*="background-color: white"],
+    .dark [style*="background: white"] {
+        background-color: rgb(30 41 59) !important; /* slate-800 */
+    }
+    
+    /* Targeted fixes for specific white background issues */
+    .dark .bg-white,
+    .dark [class*="bg-white"] {
+        background-color: rgb(30 41 59) !important; /* slate-800 */
+    }
+    
+    /* Select dropdown fixes */
+    .dark select,
+    .dark .select-wrapper,
+    .dark .dropdown-menu,
+    .dark option {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+        color: rgb(255 255 255) !important; /* white */
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Product category and tags fixes */
+    .dark .category-select,
+    .dark .tag-input,
+    .dark .tag-item,
+    .dark .category-item {
+        background-color: rgb(51 65 85) !important; /* slate-700 */
+        color: rgb(255 255 255) !important; /* white */
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Form section backgrounds */
+    .dark .form-section,
+    .dark .form-group,
+    .dark .input-group {
+        background-color: transparent !important;
+    }
+    
+    /* Pagination dark mode */
+    .dark .pagination ul.list-wrap li {
+        @apply border-slate-600 bg-slate-700 text-slate-200;
+    }
+    
+    .dark .pagination ul.list-wrap li.current {
+        @apply bg-theme text-white;
+    }
+    
+    .dark .pagination ul.list-wrap li a {
+        @apply text-slate-200;
+    }
+    
+    /* Loading and error states */
+    .dark .loading {
+        @apply text-slate-300;
+    }
+    
+    /* Specific component overrides */
+    .dark .text-slate-700 {
+        @apply text-white;
+    }
+    
+    .dark .text-gray-500 {
+        @apply text-slate-400;
+    }
+    
+    .dark .border-gray6 {
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Additional border fixes */
+    .dark .border-t,
+    .dark .border-b,
+    .dark .border-l,
+    .dark .border-r {
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Table border fixes */
+    .dark table,
+    .dark thead,
+    .dark tbody,
+    .dark tr {
+        border-color: rgb(71 85 105) !important; /* slate-600 */
+    }
+    
+    /* Text color overrides for common classes */
+    .dark .text-textBody {
+        @apply text-slate-300;
+    }
+    
+    .dark .text-text2 {
+        @apply text-slate-200;
+    }
+    
+    /* Button and form element improvements */
+    .dark button {
+        color: rgb(226 232 240) !important; /* slate-200 */
+    }
+    
+    .dark .widget-item {
+        background-color: rgb(30 41 59) !important; /* slate-800 */
+        border-color: rgb(51 65 85) !important; /* slate-700 */
+    }
+    
+    /* Status badges dark mode - using color values to avoid circular dependencies */
+    .dark .text-warning {
+        color: #FFB21D;
+    }
+    
+    .dark .bg-warning\/10 {
+        background-color: rgba(255, 178, 29, 0.2);
+    }
+    
+    .dark .text-success {
+        color: #50CD89;
+    }
+    
+    .dark .bg-success\/10 {
+        background-color: rgba(80, 205, 137, 0.2);
+    }
+    
+    .dark .text-danger {
+        color: #F1416C;
+    }
+    
+    .dark .bg-danger\/10 {
+        background-color: rgba(241, 65, 108, 0.2);
+    }
+    
+    .dark .text-info {
+        color: #3E97FF;
+    }
+    
+    .dark .bg-info\/10 {
+        background-color: rgba(62, 151, 255, 0.2);
+    }
+    
+    /* Product names and content text visibility fixes */
+    .dark .text-heading,
+    .dark .product-name,
+    .dark .product-title {
+        @apply text-white;
+    }
+    
+    /* Override any black text in dark mode */
+    .dark .text-black,
+    .dark [class*="text-black"] {
+        color: rgb(255 255 255) !important; /* white */
+    }
+    
+    /* Ensure all headings are visible */
+    .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+        color: rgb(255 255 255) !important; /* white */
+    }
+    
+    /* Product card text improvements */
+    .dark .product-card h3,
+    .dark .product-card h4,
+    .dark .product-card h5,
+    .dark .product-item-title,
+    .dark .product-list-title {
+        color: rgb(255 255 255) !important; /* white */
+    }
+     img, svg{
+         display: inline-block;
+    }
+     h1, h2, h3, h4, h5, h6{
+         font-family: 'Poppins', sans-serif;
+         font-weight: 500;
+         line-height: 1.2;
+         margin-bottom: 15px;
+         color: #010F1C;
+    }
+     h1 {
+         font-size: 40px;
+    }
+     h2 {
+         font-size: 36px;
+    }
+     h3 {
+         font-size: 24px;
+    }
+     h4 {
+         font-size: 20px;
+    }
+     h5 {
+         font-size: 16px;
+    }
+     h6 {
+         font-size: 14px;
+    }
+     p{
+         font-family: 'Poppins', sans-serif;
+         font-size: 14px;
+         line-height: 26px;
+         color: #55585B;
+         margin-bottom: 15px;
+    }
+     a, .btn, p, button, input, select, textarea, li, img, .transition-3, h1, h2, h3, h4, h5, h6 {
+         -webkit-transition: all .3s ease-out 0s;
+         -moz-transition: all .3s ease-out 0s;
+         -ms-transition: all .3s ease-out 0s;
+         -o-transition: all .3s ease-out 0s;
+         transition: all .3s ease-out 0s;
+    }
+
+
+    
+}
+ @layer components {
+     .tp-svg-2 svg {
+         @apply -translate-y-[2px];
+    }
+     .input{
+         @apply bg-white px-6 outline-none focus-within:outline-none focus-visible:outline-none rounded-md border border-gray focus:border-theme focus:bg-white text-tiny;
+    }
+     .nav-dot{
+         @apply relative px-4 pl-[12px] after:absolute after:top-[11px] after:left-0 after:w-[3px] after:h-[3px] after:rounded-full after:bg-[#6D6F71] after:content-[''];
+    }
+     .tp-btn{
+         @apply inline-flex rounded-md items-center tracking-wide text-base font-medium py-1 px-5 text-white bg-theme hover:bg-themeDark;
+    }
+     .text-hover-primary{
+         @apply hover:text-theme;
+    }
+     .badge{
+         @apply inline-flex items-center justify-center rounded text-tiny font-medium leading-none py-1.5 px-2 transition duration-200 ease-in-expo text-success bg-success/10;
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.pagination ul.list-wrap {
+    display: flex;
+    align-items: center;
+}
+.pagination ul.list-wrap li {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    margin-right: 10px;
+}
+.pagination ul.list-wrap li a{
+    font-weight: 500;
+}
+.pagination ul.list-wrap li.current {
+    background-color: #0989ff;
+    color: #fff;
+}
+.pagination ul.list-wrap li.disabled {
+    display: none;
+}
