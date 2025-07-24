@@ -8,6 +8,7 @@ import contact_img from '@assets/img/icon/contact.png';
 import language_img from '@assets/img/icon/language-flag.png';
 import MobileCategory from '@/layout/headers/header-com/mobile-category';
 import MobileMenus from './mobile-menus';
+import ResponsiveLogo from './responsive-logo';
 import { useCurrency } from '@/contexts/CurrencyContext';
 import { useGetActiveCurrenciesQuery } from '@/redux/features/currencyApi';
 
@@ -47,9 +48,7 @@ const OffCanvas = ({ isOffCanvasOpen, setIsCanvasOpen,categoryType = "electronic
           <div className="offcanvas__content">
             <div className="offcanvas__top mb-70 d-flex justify-content-center align-items-center">
               <div className="offcanvas__logo logo">
-                <Link href="/">
-                  <Image src={logo} alt="logo" />
-                </Link>
+                <ResponsiveLogo />
               </div>
             </div>
             <div className="offcanvas__category pb-40">

@@ -36,15 +36,34 @@
 
 /* 2. Sticky header navigation centering */
 .tp-header-sticky-area .main-menu.menu-style-1 {
-  > nav > ul > li {
-    margin-right: 28px; /* Slightly reduced for sticky header */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  
+  > nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     
-    &:last-child {
-      margin-right: 0;
-    }
-    
-    > a {
-      padding: 20px 14px;
+    > ul {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center;
+      margin: 0 auto;
+      list-style: none;
+      padding: 0;
+      
+      > li {
+        margin-right: 28px; /* Slightly reduced for sticky header */
+        
+        &:last-child {
+          margin-right: 0;
+        }
+        
+        > a {
+          padding: 20px 14px;
+        }
+      }
     }
   }
 }
@@ -129,11 +148,38 @@
       
       .main-menu {
         width: 100%;
+        display: flex;
+        justify-content: center;
         
         .tp-main-menu-content {
           display: flex;
           justify-content: center;
+          width: 100%;
         }
+      }
+    }
+  }
+}
+
+/* Force center the main navigation container */
+.tp-header-bottom {
+  .main-menu.menu-style-1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    > nav {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      
+      > ul {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center;
+        margin: 0 auto;
+        list-style: none;
+        padding: 0;
       }
     }
   }
