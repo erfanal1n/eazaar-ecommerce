@@ -45,7 +45,7 @@ const OffCanvas = ({ isOffCanvasOpen, setIsCanvasOpen,categoryType = "electronic
             </button>
           </div>
           <div className="offcanvas__content">
-            <div className="offcanvas__top mb-70 d-flex justify-content-between align-items-center">
+            <div className="offcanvas__top mb-70 d-flex justify-content-center align-items-center">
               <div className="offcanvas__logo logo">
                 <Link href="/">
                   <Image src={logo} alt="logo" />

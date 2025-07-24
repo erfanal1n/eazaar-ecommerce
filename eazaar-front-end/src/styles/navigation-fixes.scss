@@ -1,0 +1,211 @@
+/* Navigation Menu Centering and Mobile Logo Fixes */
+
+/* 1. Fix main navigation menu centering */
+.main-menu.menu-style-1 {
+  > nav {
+    text-align: center;
+    
+    > ul {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      
+      > li {
+        margin-right: 32px; /* Increased spacing for better balance */
+        
+        /* Remove margin from last item */
+        &:last-child {
+          margin-right: 0;
+        }
+        
+        > a {
+          padding: 23px 16px; /* Add horizontal padding for better spacing */
+          transition: all 0.3s ease;
+          font-weight: 500;
+          
+          &:hover {
+            color: var(--tp-theme-primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 2. Sticky header navigation centering */
+.tp-header-sticky-area .main-menu.menu-style-1 {
+  > nav > ul > li {
+    margin-right: 28px; /* Slightly reduced for sticky header */
+    
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    > a {
+      padding: 20px 14px;
+    }
+  }
+}
+
+/* 3. Mobile off-canvas menu logo alignment fixes */
+.offcanvas__top {
+  .offcanvas__logo.logo {
+    text-align: center;
+    margin-bottom: 10px;
+    
+    a {
+      display: inline-block;
+      
+      img {
+        max-height: 50px;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+/* 4. Mobile menu items professional spacing */
+.tp-main-menu-mobile {
+  ul {
+    padding: 0;
+    margin: 0;
+    
+    li {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      a {
+        display: block;
+        padding: 15px 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--tp-common-black);
+        transition: all 0.3s ease;
+        
+        &:hover {
+          color: var(--tp-theme-primary);
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+/* 5. Off-canvas category toggle button spacing */
+.tp-offcanvas-category-toggle {
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  width: 100%;
+  text-align: left;
+  background: var(--tp-theme-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: var(--tp-theme-secondary);
+  }
+  
+  i {
+    margin-right: 10px;
+  }
+}
+
+/* 6. Header bottom navigation wrapper perfect centering */
+.tp-header-bottom .tp-mega-menu-wrapper {
+  .row {
+    .col-xl-6.col-lg-6 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      .main-menu {
+        width: 100%;
+        
+        .tp-main-menu-content {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+/* 7. Responsive adjustments */
+@media (max-width: 1199.98px) {
+  .main-menu.menu-style-1 > nav > ul > li {
+    margin-right: 24px;
+    
+    > a {
+      padding: 20px 12px;
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .main-menu.menu-style-1 > nav > ul > li {
+    margin-right: 20px;
+    
+    > a {
+      padding: 18px 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+/* 8. Off-canvas mobile menu improvements */
+.offcanvas__area {
+  .offcanvas__content {
+    padding-top: 20px;
+    
+    .offcanvas__top {
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+    
+    .offcanvas__category {
+      margin-bottom: 30px;
+    }
+    
+    .tp-main-menu-mobile {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/* 9. Dark mode support for navigation fixes */
+.theme-dark {
+  .main-menu.menu-style-1 > nav > ul > li > a {
+    color: var(--tp-text-body);
+    
+    &:hover {
+      color: var(--tp-theme-primary);
+    }
+  }
+  
+  .tp-main-menu-mobile ul li {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    
+    a {
+      color: var(--tp-text-body);
+      
+      &:hover {
+        color: var(--tp-theme-primary);
+      }
+    }
+  }
+  
+  .offcanvas__top {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+}
