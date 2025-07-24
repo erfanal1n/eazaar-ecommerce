@@ -530,7 +530,7 @@ const ReportsExportsPage = () => {
                           </>
                         ) : (
                           <>
-                            <Download className="w-4 h-4 mr-2 inline-block" />
+                            <Download />
                             Generate Report
                           </>
                         )}
