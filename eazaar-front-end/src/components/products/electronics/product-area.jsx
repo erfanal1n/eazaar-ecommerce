@@ -75,7 +75,7 @@ const ProductArea = () => {
               No Products Available
             </h5>
             <p style={{ color: "#9ca3af", fontSize: "14px", margin: 0 }}>
-              We're working on adding more products to this category.
+              We&apos;re working on adding more products to this category.
             </p>
           </div>
         </div>

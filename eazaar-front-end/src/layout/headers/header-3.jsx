@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Link from 'next/link';
 // internal
 import { CartTwo, Menu, Search, Wishlist } from '@/svg';
 import Menus from './header-com/menus';

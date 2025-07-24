@@ -42,13 +42,18 @@ export const getDeviceType = () => {
  * Hook to get current device type with responsive updates
  */
 export const useDeviceType = () => {
-  if (typeof window === 'undefined') {
-    return 'desktop';
-  }
-  
-  const [deviceType, setDeviceType] = useState(getDeviceType());
+  const [deviceType, setDeviceType] = useState(() => {
+    if (typeof window === 'undefined') {
+      return 'desktop';
+    }
+    return getDeviceType();
+  });
   
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    
     const handleResize = () => {
       setDeviceType(getDeviceType());
     };
