@@ -37,7 +37,7 @@ const AnalyticsPage = () => {
       <div className="body-content px-8 py-8 bg-slate-100 dark:bg-slate-900 transition-colors duration-300">
         {/* breadcrumb start */}
         <Breadcrumb title="Analytics" subtitle="Analytics Dashboard" />
-        {/* breadcrumb end */
+        {/* breadcrumb end */}
         <div className="mb-6">
           <h1 className="text-2xl font-bold text-gray-900">Analytics Dashboard</h1>
           <p className="text-gray-600 mt-2">
