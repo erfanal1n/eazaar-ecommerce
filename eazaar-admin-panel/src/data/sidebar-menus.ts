@@ -121,17 +121,6 @@ const sidebar_menu: Array<ISidebarMenus> = [
     link: "/registered-users",
     title: "Registered Users",
   },
-  {
-    id: 14,
-    icon: Pages,
-    link: "/dashboard",
-    title: "Pages",
-    subMenus: [
-      { title: "Register", link: "/register" },
-      { title: "Login", link: "/login" },
-      { title: "Forgot Password", link: "/forgot-password" }
-    ],
-  },
 ];
 
 export default sidebar_menu;
