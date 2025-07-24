@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { useUploadSliderAssetsMutation, useDeleteImageFromCloudinaryMutation } from '@/redux/testHeroBanner/testHeroBannerApi';
+// import { useUploadSliderAssetsMutation, useDeleteImageFromCloudinaryMutation } from '@/redux/testHeroBanner/testHeroBannerApi';
 import { notifySuccess, notifyError } from '@/utils/toast';
 
 interface ImageUploadFieldProps {
@@ -33,8 +33,12 @@ const ImageUploadField: React.FC<ImageUploadFieldProps> = ({
   showSizeGuide = true,
   bannerId
 }) => {
-  const [uploadAssets, { isLoading: isUploading }] = useUploadSliderAssetsMutation();
-  const [deleteImage, { isLoading: isDeleting }] = useDeleteImageFromCloudinaryMutation();
+  // const [uploadAssets, { isLoading: isUploading }] = useUploadSliderAssetsMutation();
+  const isUploading = false;
+  const uploadAssets = async (formData: any) => ({ unwrap: () => null });
+  // const [deleteImage, { isLoading: isDeleting }] = useDeleteImageFromCloudinaryMutation();
+  const isDeleting = false;
+  const deleteImage = async () => null;
   const [urlInput, setUrlInput] = useState('');
   const [showUrlInput, setShowUrlInput] = useState(false);
 
