@@ -38,8 +38,7 @@ app.use(cors({
     "http://localhost:3001", 
     "http://localhost:3002", 
     "http://localhost:4000",
-    "https://eazaar-frontend.vercel.app",
-    "https://eazaar-ecommerce.vercel.app"
+    "https://eazaar-frontend.vercel.app"
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
@@ -56,8 +55,7 @@ app.use((req, res, next) => {
     "http://localhost:3001", 
     "http://localhost:3002", 
     "http://localhost:4000",
-    "https://eazaar-frontend.vercel.app",
-    "https://eazaar-ecommerce.vercel.app"
+    "https://eazaar-frontend.vercel.app"
   ];
   
   if (allowedOrigins.includes(origin)) {
