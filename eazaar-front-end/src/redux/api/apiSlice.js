@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:7000/api",
+    baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:7000/api",
     prepareHeaders: async (headers, { getState, endpoint }) => {
       try {
         const userInfo = Cookies.get('userInfo');

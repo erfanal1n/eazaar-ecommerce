@@ -23,7 +23,7 @@ const UnifiedInvoice = ({ orderData, className = "", mode = "order" }) => {
   React.useEffect(() => {
     if (error && !fallbackSettings) {
       console.log('🔄 Attempting fallback API call...');
-      fetch('http://localhost:7000/api/invoice-settings')
+      fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:7000/api'}/invoice-settings`)
         .then(response => response.json())
         .then(data => {
           if (data.success) {
