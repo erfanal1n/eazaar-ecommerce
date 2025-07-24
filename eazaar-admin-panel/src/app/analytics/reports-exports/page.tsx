@@ -132,8 +132,8 @@ const ReportsExportsPage = () => {
     csv += headers.map(header => `"${header}"`).join(',') + '\n';
     
     // Add data rows with proper escaping
-    data.forEach(row => {
-      csv += row.map(cell => `"${cell}"`).join(',') + '\n';
+    data.forEach((row: any[]) => {
+      csv += row.map((cell: any) => `"${cell}"`).join(',') + '\n';
     });
     
     return csv;
