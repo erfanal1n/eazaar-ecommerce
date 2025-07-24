@@ -24,28 +24,28 @@ const ReportsExportsPage = () => {
       id: 'sales-summary',
       name: 'Sales Summary Report',
       description: 'Comprehensive overview of sales performance, revenue trends, and order analytics',
-      icon: <Analytics className="w-6 h-6" />,
+      icon: <Analytics />,
       category: 'sales'
     },
     {
       id: 'customer-insights',
       name: 'Customer Analytics Report',
       description: 'Customer behavior, demographics, retention rates, and lifetime value analysis',
-      icon: <FileText className="w-6 h-6" />,
+      icon: <FileText />,
       category: 'customers'
     },
     {
       id: 'product-performance',
       name: 'Product Performance Report',
       description: 'Top-selling products, inventory levels, and category performance metrics',
-      icon: <FileText className="w-6 h-6" />,
+      icon: <FileText />,
       category: 'products'
     },
     {
       id: 'financial-overview',
       name: 'Financial Overview Report',
       description: 'Revenue breakdown, profit margins, and financial KPI analysis',
-      icon: <Analytics className="w-6 h-6" />,
+      icon: <Analytics />,
       category: 'financial'
     }
   ];
