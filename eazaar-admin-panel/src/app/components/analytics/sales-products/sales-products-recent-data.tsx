@@ -39,7 +39,7 @@ const SalesProductsRecentData = () => {
                   </tr>
                 ) : topProducts.length > 0 ? (
                   topProducts.map((product, index) => {
-                    const avgPrice = product.sold > 0 ? ((product as any).salesValue || (product as any).revenue) / product.sold : 0;
+                    const avgPrice = product.sold > 0 ? (product.salesValue || product.revenue) / product.sold : 0;
                     return (
                       <tr key={product.id || index} className="border-b border-gray6">
                         <td className="p-4 py-3 text-lg text-slate-700 font-medium">
