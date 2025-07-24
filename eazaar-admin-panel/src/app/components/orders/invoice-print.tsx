@@ -65,7 +65,7 @@ const InvoicePrint = ({ orderData }: IPropType) => {
       <div 
         className={`${getHeaderClass()} p-8`}
         style={{ 
-          background: settings.headerStyle === 'modern' 
+          background: (settings as any).headerStyle === 'modern' 
             ? `linear-gradient(135deg, ${settings.primaryColor}, ${settings.secondaryColor})`
             : undefined
         }}

@@ -10,11 +10,11 @@ interface ProtectedRouteProps {
   fallback?: React.ReactNode;
 }
 
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
+const ProtectedRoute = ({ 
   children, 
   requiredPath, 
   fallback 
-}) => {
+}: ProtectedRouteProps): JSX.Element => {
   const { hasAnyPermission, userRole } = usePermissions();
   const router = useRouter();
 
@@ -39,7 +39,7 @@ const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 
   // Check if user has permission (Super Admin always has access)
   if (userRole !== "Super Admin" && !hasAnyPermission(requiredPath)) {
-    return fallback || (
+    return (fallback as JSX.Element) || (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Access Denied</h2>

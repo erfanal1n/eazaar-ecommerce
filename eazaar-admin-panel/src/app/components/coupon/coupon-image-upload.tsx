@@ -70,11 +70,11 @@ const CouponImageUpload = ({ setImage, isSubmitted, image, setIsSubmitted }: IPr
       
       if (typeof error === 'object' && error !== null) {
         if ('data' in error && error.data && typeof error.data === 'object') {
-          errorMessage = error.data.message || error.data.error || errorMessage;
-        } else if ('message' in error && error.message) {
-          errorMessage = error.message;
-        } else if ('error' in error && error.error) {
-          errorMessage = error.error;
+          errorMessage = (error.data as any).message || (error.data as any).error || errorMessage;
+        } else if ('message' in error && (error as any).message) {
+          errorMessage = (error as any).message;
+        } else if ('error' in error && (error as any).error) {
+          errorMessage = (error as any).error;
         }
       }
       

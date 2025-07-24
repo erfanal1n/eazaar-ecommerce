@@ -92,10 +92,10 @@ const CouponEditArea = ({ id }: { id: string }) => {
                 <p className="mb-0 text-base text-black">Product Type</p>
                 <div className="category-add-select select-bordered">
                   <ProductType
-                    setSelectProductType={setSelectProductType}
+                    setSelectProductType={setSelectProductType as any}
                     control={control}
                     errors={errors}
-                    default_value={coupon.productType}
+                    default_value={coupon.productType as any}
                   />
                 </div>
               </div>

@@ -49,6 +49,8 @@ export const apiSlice = createApi({
     "SliderShape",
     "AnimationPreset",
     "TypographyPreset",
-    "Currency"
+    "Currency",
+    "AdminRole",
+    "Product"
   ],
 });

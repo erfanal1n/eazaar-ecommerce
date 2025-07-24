@@ -694,7 +694,7 @@ function getOrderInvoiceData(orderData: Order, settings: InvoiceSettings) {
     customerName: orderData.user?.name || "Customer",
     customerPhone: (orderData.user as any)?.phone || (orderData.user as any)?.contactNumber || "N/A",
     customerEmail: orderData.user?.email || "N/A",
-    customerAddress: orderData.address || orderData.user?.address || "N/A",
+    customerAddress: orderData.address || (orderData.user as any)?.address || "N/A",
     items: cart.map((item, index) => ({
       _id: (index + 1).toString(),
       title: item.title || "Product",

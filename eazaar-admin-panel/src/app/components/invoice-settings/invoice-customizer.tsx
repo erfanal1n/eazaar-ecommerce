@@ -19,6 +19,7 @@ interface Props {
 const InvoiceCustomizer = ({ settings, onSettingsChange }: Props) => {
   const [activeTab, setActiveTab] = useState('company');
   const [isUploading, setIsUploading] = useState(false);
+  const [dragOver, setDragOver] = useState(false);
 
   const handleChange = useCallback((field: keyof InvoiceSettings, value: any) => {
     const newSettings = {
