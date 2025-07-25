@@ -496,9 +496,13 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7) !important;
   }
 
-  // Banner buttons visibility
+  // Banner buttons visibility - ALL button types
   .tp-banner-btn .tp-btn,
-  .tp-slider-btn .tp-btn {
+  .tp-slider-btn .tp-btn,
+  .tp-banner-btn button,
+  .tp-slider-btn button,
+  .tp-btn.tp-btn-border,
+  .tp-btn-border {
     background: var(--tp-theme-primary) !important;
     color: var(--tp-common-white) !important;
     border: 2px solid var(--tp-theme-primary) !important;
@@ -511,25 +515,44 @@
     }
   }
 
-  // Footer dark mode - use light theme for social icons
+  // New Arrival and product section buttons
+  .tp-product-tab .nav-tabs .nav-item .nav-link {
+    background: var(--tp-theme-primary) !important;
+    color: var(--tp-common-white) !important;
+    border: 2px solid var(--tp-theme-primary) !important;
+
+    &:hover {
+      background: var(--tp-common-white) !important;
+      color: var(--tp-theme-primary) !important;
+      border-color: var(--tp-common-white) !important;
+    }
+
+    &.active {
+      background: var(--tp-common-white) !important;
+      color: var(--tp-theme-primary) !important;
+      border-color: var(--tp-common-white) !important;
+    }
+  }
+
+  // Footer dark mode - proper white text on dark background
   .tp-footer-area {
-    background: var(--tp-common-white) !important;
-    border-top: 1px solid #e5e7eb !important;
-    color: #1f2937 !important;
+    background: var(--tp-bg-primary) !important;
+    border-top: 1px solid var(--tp-border-primary) !important;
+    color: var(--tp-common-white) !important;
 
     h4, h5, h6 {
-      color: #1f2937 !important;
+      color: var(--tp-common-white) !important;
     }
 
     p, span, a {
-      color: #4b5563 !important;
+      color: var(--tp-common-white) !important;
 
       &:hover {
         color: var(--tp-theme-primary) !important;
       }
     }
 
-    // Social icons styling
+    // Social icons styling - keep light for visibility
     .tp-footer-social {
       a {
         background: #f3f4f6 !important;
@@ -540,6 +563,33 @@
           background: var(--tp-theme-primary) !important;
           color: var(--tp-common-white) !important;
           border-color: var(--tp-theme-primary) !important;
+        }
+      }
+    }
+
+    // Footer widget titles
+    .tp-footer-widget-title {
+      color: var(--tp-common-white) !important;
+    }
+
+    // Footer links
+    .tp-footer-widget ul li a {
+      color: var(--tp-common-white) !important;
+
+      &:hover {
+        color: var(--tp-theme-primary) !important;
+      }
+    }
+
+    // Contact info
+    .tp-footer-contact-info {
+      color: var(--tp-common-white) !important;
+
+      a {
+        color: var(--tp-common-white) !important;
+
+        &:hover {
+          color: var(--tp-theme-primary) !important;
         }
       }
     }
