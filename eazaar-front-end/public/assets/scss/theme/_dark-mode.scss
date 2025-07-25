@@ -456,20 +456,91 @@
     }
   }
 
-  // Footer dark mode
+  // Main menu All Categories button fix
+  .tp-category-menu-btn {
+    background: var(--tp-theme-primary) !important;
+    color: var(--tp-common-white) !important;
+    border: 1px solid var(--tp-theme-primary) !important;
+    
+    &:hover {
+      background: var(--tp-theme-secondary) !important;
+      border-color: var(--tp-theme-secondary) !important;
+    }
+    
+    span {
+      color: var(--tp-common-white) !important;
+      
+      svg {
+        fill: var(--tp-common-white) !important;
+        color: var(--tp-common-white) !important;
+      }
+    }
+  }
+
+  // Banner text visibility fixes
+  .tp-banner-title,
+  .tp-slider-title {
+    color: var(--tp-common-white) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .tp-banner-subtitle,
+  .tp-slider-subtitle {
+    color: var(--tp-common-white) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  .tp-banner-description,
+  .tp-slider-description {
+    color: var(--tp-common-white) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7) !important;
+  }
+
+  // Banner buttons visibility
+  .tp-banner-btn .tp-btn,
+  .tp-slider-btn .tp-btn {
+    background: var(--tp-theme-primary) !important;
+    color: var(--tp-common-white) !important;
+    border: 2px solid var(--tp-theme-primary) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+
+    &:hover {
+      background: var(--tp-common-white) !important;
+      color: var(--tp-theme-primary) !important;
+      border-color: var(--tp-common-white) !important;
+    }
+  }
+
+  // Footer dark mode - use light theme for social icons
   .tp-footer-area {
-    background: var(--tp-footer-grey-1);
-    border-top: 1px solid var(--tp-border-primary);
+    background: var(--tp-common-white) !important;
+    border-top: 1px solid #e5e7eb !important;
+    color: #1f2937 !important;
 
     h4, h5, h6 {
-      color: var(--tp-heading-primary);
+      color: #1f2937 !important;
     }
 
     p, span, a {
-      color: var(--tp-text-body);
+      color: #4b5563 !important;
 
       &:hover {
-        color: var(--tp-theme-primary);
+        color: var(--tp-theme-primary) !important;
+      }
+    }
+
+    // Social icons styling
+    .tp-footer-social {
+      a {
+        background: #f3f4f6 !important;
+        color: #6b7280 !important;
+        border: 1px solid #d1d5db !important;
+
+        &:hover {
+          background: var(--tp-theme-primary) !important;
+          color: var(--tp-common-white) !important;
+          border-color: var(--tp-theme-primary) !important;
+        }
       }
     }
   }
@@ -2283,6 +2354,78 @@ html body.dark-mode .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title
   
   &:hover {
     color: #ffff00 !important;
+  }
+}
+
+} // Close .theme-dark
+
+// ============================================
+// ELECTRONICS SECTION LAYOUT FIX
+// ============================================
+
+.tp-product-gadget-categories {
+  background: transparent !important;
+  
+  .tp-product-gadget-thumb {
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: 40% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+    
+    img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      opacity: 0.8 !important;
+    }
+  }
+  
+  .tp-product-gadget-categories-title {
+    position: relative !important;
+    z-index: 2 !important;
+    color: var(--tp-heading-primary) !important;
+    margin-bottom: 20px !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+  }
+  
+  .tp-product-gadget-categories-list {
+    position: relative !important;
+    z-index: 2 !important;
+    background: transparent !important;
+    width: 55% !important;
+  }
+  
+  .tp-product-gadget-btn {
+    position: relative !important;
+    z-index: 2 !important;
+    margin-top: 20px !important;
+  }
+}
+
+// Dark mode specific fixes for Electronics section
+.theme-dark .tp-product-gadget-categories {
+  .tp-product-gadget-categories-title {
+    color: var(--tp-heading-primary) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+  }
+  
+  .tp-product-gadget-categories-list {
+    ul li a {
+      color: var(--tp-text-body) !important;
+      background: rgba(var(--tp-bg-primary-rgb, 15, 23, 42), 0.8) !important;
+      padding: 8px 12px !important;
+      border-radius: 4px !important;
+      margin-bottom: 5px !important;
+      display: block !important;
+      
+      &:hover {
+        color: var(--tp-theme-primary) !important;
+        background: rgba(var(--tp-theme-primary-rgb, 59, 130, 246), 0.1) !important;
+      }
+    }
   }
 }
 
