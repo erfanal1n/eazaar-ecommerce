@@ -537,80 +537,201 @@
 } // Close .theme-dark
 
 // ============================================
-// FOOTER DARK MODE - SPECIFIC OVERRIDES
+// FOOTER DARK MODE - COMPREHENSIVE WHITE TEXT OVERRIDE
 // ============================================
 
+// Footer area background and base text color
 .theme-dark .tp-footer-area,
-[data-theme="dark"] .tp-footer-area,
-.dark-mode .tp-footer-area {
+[data-theme="dark"] .tp-footer-area,  
+.dark-mode .tp-footer-area,
+body.theme-dark .tp-footer-area,
+html.theme-dark .tp-footer-area {
   background: var(--tp-bg-primary) !important;
   border-top: 1px solid var(--tp-border-primary) !important;
   color: var(--tp-common-white) !important;
 }
 
-// Footer widget titles
+// ALL FOOTER TEXT ELEMENTS - COMPREHENSIVE WHITE TEXT
+.theme-dark .tp-footer-area *,
+[data-theme="dark"] .tp-footer-area *,
+.dark-mode .tp-footer-area *,
+body.theme-dark .tp-footer-area *,
+html.theme-dark .tp-footer-area * {
+  color: var(--tp-common-white) !important;
+}
+
+.theme-dark .tp-footer-area h1,
+.theme-dark .tp-footer-area h2, 
+.theme-dark .tp-footer-area h3,
+.theme-dark .tp-footer-area h4,
+.theme-dark .tp-footer-area h5,
+.theme-dark .tp-footer-area h6,
+.theme-dark .tp-footer-area p,
+.theme-dark .tp-footer-area span,
+.theme-dark .tp-footer-area div,
+.theme-dark .tp-footer-area a,
+.theme-dark .tp-footer-area li,
+.theme-dark .tp-footer-area ul,
+[data-theme="dark"] .tp-footer-area h1,
+[data-theme="dark"] .tp-footer-area h2,
+[data-theme="dark"] .tp-footer-area h3,
+[data-theme="dark"] .tp-footer-area h4,
+[data-theme="dark"] .tp-footer-area h5,
+[data-theme="dark"] .tp-footer-area h6,
+[data-theme="dark"] .tp-footer-area p,
+[data-theme="dark"] .tp-footer-area span,
+[data-theme="dark"] .tp-footer-area div,
+[data-theme="dark"] .tp-footer-area a,
+[data-theme="dark"] .tp-footer-area li,
+[data-theme="dark"] .tp-footer-area ul,
+.dark-mode .tp-footer-area h1,
+.dark-mode .tp-footer-area h2,
+.dark-mode .tp-footer-area h3,
+.dark-mode .tp-footer-area h4,
+.dark-mode .tp-footer-area h5,
+.dark-mode .tp-footer-area h6,
+.dark-mode .tp-footer-area p,
+.dark-mode .tp-footer-area span,
+.dark-mode .tp-footer-area div,
+.dark-mode .tp-footer-area a,
+.dark-mode .tp-footer-area li,
+.dark-mode .tp-footer-area ul {
+  color: var(--tp-common-white) !important;
+}
+
+// Footer widget titles - FORCE WHITE
 .theme-dark .tp-footer-area .tp-footer-widget-title,
 [data-theme="dark"] .tp-footer-area .tp-footer-widget-title,
-.dark-mode .tp-footer-area .tp-footer-widget-title {
+.dark-mode .tp-footer-area .tp-footer-widget-title,
+.theme-dark footer .tp-footer-widget-title,
+[data-theme="dark"] footer .tp-footer-widget-title,
+.dark-mode footer .tp-footer-widget-title {
   color: var(--tp-common-white) !important;
 }
 
-// Footer description
+// Footer description - FORCE WHITE
 .theme-dark .tp-footer-area .tp-footer-desc,
 [data-theme="dark"] .tp-footer-area .tp-footer-desc,
-.dark-mode .tp-footer-area .tp-footer-desc {
+.dark-mode .tp-footer-area .tp-footer-desc,
+.theme-dark footer .tp-footer-desc,
+[data-theme="dark"] footer .tp-footer-desc,
+.dark-mode footer .tp-footer-desc {
   color: var(--tp-common-white) !important;
 }
 
-// Footer links in widget content
+// Footer links in widget content - FORCE WHITE
 .theme-dark .tp-footer-area .tp-footer-widget-content ul li a,
 [data-theme="dark"] .tp-footer-area .tp-footer-widget-content ul li a,
-.dark-mode .tp-footer-area .tp-footer-widget-content ul li a {
+.dark-mode .tp-footer-area .tp-footer-widget-content ul li a,
+.theme-dark footer .tp-footer-widget-content ul li a,
+[data-theme="dark"] footer .tp-footer-widget-content ul li a,
+.dark-mode footer .tp-footer-widget-content ul li a {
   color: var(--tp-common-white) !important;
 }
 
 .theme-dark .tp-footer-area .tp-footer-widget-content ul li a:hover,
 [data-theme="dark"] .tp-footer-area .tp-footer-widget-content ul li a:hover,
-.dark-mode .tp-footer-area .tp-footer-widget-content ul li a:hover {
+.dark-mode .tp-footer-area .tp-footer-widget-content ul li a:hover,
+.theme-dark footer .tp-footer-widget-content ul li a:hover,
+[data-theme="dark"] footer .tp-footer-widget-content ul li a:hover,
+.dark-mode footer .tp-footer-widget-content ul li a:hover {
   color: var(--tp-theme-primary) !important;
 }
 
-// Footer talk section
+// Footer talk section - FORCE WHITE
 .theme-dark .tp-footer-area .tp-footer-talk span,
 [data-theme="dark"] .tp-footer-area .tp-footer-talk span,
-.dark-mode .tp-footer-area .tp-footer-talk span {
+.dark-mode .tp-footer-area .tp-footer-talk span,
+.theme-dark footer .tp-footer-talk span,
+[data-theme="dark"] footer .tp-footer-talk span,
+.dark-mode footer .tp-footer-talk span {
   color: var(--tp-common-white) !important;
 }
 
+.theme-dark .tp-footer-area .tp-footer-talk h4,
 .theme-dark .tp-footer-area .tp-footer-talk h4 a,
+[data-theme="dark"] .tp-footer-area .tp-footer-talk h4,
 [data-theme="dark"] .tp-footer-area .tp-footer-talk h4 a,
-.dark-mode .tp-footer-area .tp-footer-talk h4 a {
+.dark-mode .tp-footer-area .tp-footer-talk h4,
+.dark-mode .tp-footer-area .tp-footer-talk h4 a,
+.theme-dark footer .tp-footer-talk h4,
+.theme-dark footer .tp-footer-talk h4 a,
+[data-theme="dark"] footer .tp-footer-talk h4,
+[data-theme="dark"] footer .tp-footer-talk h4 a,
+.dark-mode footer .tp-footer-talk h4,
+.dark-mode footer .tp-footer-talk h4 a {
   color: var(--tp-common-white) !important;
 }
 
 .theme-dark .tp-footer-area .tp-footer-talk h4 a:hover,
 [data-theme="dark"] .tp-footer-area .tp-footer-talk h4 a:hover,
-.dark-mode .tp-footer-area .tp-footer-talk h4 a:hover {
+.dark-mode .tp-footer-area .tp-footer-talk h4 a:hover,
+.theme-dark footer .tp-footer-talk h4 a:hover,
+[data-theme="dark"] footer .tp-footer-talk h4 a:hover,
+.dark-mode footer .tp-footer-talk h4 a:hover {
   color: var(--tp-theme-primary) !important;
 }
 
-// Footer contact content
+// Footer contact content - FORCE WHITE
+.theme-dark .tp-footer-area .tp-footer-contact-content,
+.theme-dark .tp-footer-area .tp-footer-contact-content p,
 .theme-dark .tp-footer-area .tp-footer-contact-content p a,
+[data-theme="dark"] .tp-footer-area .tp-footer-contact-content,
+[data-theme="dark"] .tp-footer-area .tp-footer-contact-content p,
 [data-theme="dark"] .tp-footer-area .tp-footer-contact-content p a,
-.dark-mode .tp-footer-area .tp-footer-contact-content p a {
+.dark-mode .tp-footer-area .tp-footer-contact-content,
+.dark-mode .tp-footer-area .tp-footer-contact-content p,
+.dark-mode .tp-footer-area .tp-footer-contact-content p a,
+.theme-dark footer .tp-footer-contact-content,
+.theme-dark footer .tp-footer-contact-content p,
+.theme-dark footer .tp-footer-contact-content p a,
+[data-theme="dark"] footer .tp-footer-contact-content,
+[data-theme="dark"] footer .tp-footer-contact-content p,
+[data-theme="dark"] footer .tp-footer-contact-content p a,
+.dark-mode footer .tp-footer-contact-content,
+.dark-mode footer .tp-footer-contact-content p,
+.dark-mode footer .tp-footer-contact-content p a {
   color: var(--tp-common-white) !important;
 }
 
 .theme-dark .tp-footer-area .tp-footer-contact-content p a:hover,
 [data-theme="dark"] .tp-footer-area .tp-footer-contact-content p a:hover,
-.dark-mode .tp-footer-area .tp-footer-contact-content p a:hover {
+.dark-mode .tp-footer-area .tp-footer-contact-content p a:hover,
+.theme-dark footer .tp-footer-contact-content p a:hover,
+[data-theme="dark"] footer .tp-footer-contact-content p a:hover,
+.dark-mode footer .tp-footer-contact-content p a:hover {
+  color: var(--tp-theme-primary) !important;
+}
+
+// Footer copyright section - FORCE WHITE
+.theme-dark .tp-footer-bottom,
+.theme-dark .tp-footer-bottom .tp-footer-copyright,
+.theme-dark .tp-footer-bottom .tp-footer-copyright p,
+.theme-dark .tp-footer-bottom .tp-footer-copyright p a,
+[data-theme="dark"] .tp-footer-bottom,
+[data-theme="dark"] .tp-footer-bottom .tp-footer-copyright,
+[data-theme="dark"] .tp-footer-bottom .tp-footer-copyright p,
+[data-theme="dark"] .tp-footer-bottom .tp-footer-copyright p a,
+.dark-mode .tp-footer-bottom,
+.dark-mode .tp-footer-bottom .tp-footer-copyright,
+.dark-mode .tp-footer-bottom .tp-footer-copyright p,
+.dark-mode .tp-footer-bottom .tp-footer-copyright p a {
+  color: var(--tp-common-white) !important;
+}
+
+.theme-dark .tp-footer-bottom .tp-footer-copyright p a:hover,
+[data-theme="dark"] .tp-footer-bottom .tp-footer-copyright p a:hover,
+.dark-mode .tp-footer-bottom .tp-footer-copyright p a:hover {
   color: var(--tp-theme-primary) !important;
 }
 
 // Social icons - keep light for visibility
 .theme-dark .tp-footer-area .tp-footer-social a,
 [data-theme="dark"] .tp-footer-area .tp-footer-social a,
-.dark-mode .tp-footer-area .tp-footer-social a {
+.dark-mode .tp-footer-area .tp-footer-social a,
+.theme-dark footer .tp-footer-social a,
+[data-theme="dark"] footer .tp-footer-social a,
+.dark-mode footer .tp-footer-social a {
   background: #f3f4f6 !important;
   color: #6b7280 !important;
   border: 1px solid #d1d5db !important;
@@ -618,7 +739,10 @@
 
 .theme-dark .tp-footer-area .tp-footer-social a:hover,
 [data-theme="dark"] .tp-footer-area .tp-footer-social a:hover,
-.dark-mode .tp-footer-area .tp-footer-social a:hover {
+.dark-mode .tp-footer-area .tp-footer-social a:hover,
+.theme-dark footer .tp-footer-social a:hover,
+[data-theme="dark"] footer .tp-footer-social a:hover,
+.dark-mode footer .tp-footer-social a:hover {
   background: var(--tp-theme-primary) !important;
   color: var(--tp-common-white) !important;
   border-color: var(--tp-theme-primary) !important;
