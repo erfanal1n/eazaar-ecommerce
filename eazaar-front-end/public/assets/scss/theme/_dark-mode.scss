@@ -2288,6 +2288,12 @@ html body.dark-mode .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title
   font-weight: 700 !important;
 }
 
+} // Close .theme-dark
+
+// ============================================
+// CART TABLE DARK MODE FIXES (OUTSIDE THEME-DARK SCOPE)
+// ============================================
+
 /* OVERRIDE ANY PREVIOUS tp-cart-title LINK STYLES */
 html body.theme-dark .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a,
 html body[data-theme="dark"] .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a,
@@ -2299,27 +2305,31 @@ html body.dark-mode .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title
   display: block !important;
   text-shadow: none !important;
   background-color: transparent !important;
-  
-  &:link,
-  &:visited,
-  &:active,
-  &:focus {
-    color: #1f2937 !important;
-    background-color: transparent !important;
-  }
-  
-  &:hover {
-    color: #0f172a !important;
-    text-decoration: underline !important;
-    background-color: transparent !important;
-  }
 }
 
-} // Close .theme-dark
+html body.theme-dark .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:link,
+html body[data-theme="dark"] .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:link,
+html body.dark-mode .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:link,
+html body.theme-dark .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:visited,
+html body[data-theme="dark"] .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:visited,
+html body.dark-mode .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:visited,
+html body.theme-dark .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:active,
+html body[data-theme="dark"] .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:active,
+html body.dark-mode .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:active,
+html body.theme-dark .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:focus,
+html body[data-theme="dark"] .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:focus,
+html body.dark-mode .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:focus {
+  color: #1f2937 !important;
+  background-color: transparent !important;
+}
 
-// ============================================
-// FINAL OVERRIDE - AFTER ALL UNIVERSAL STYLES
-// ============================================
+html body.theme-dark .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:hover,
+html body[data-theme="dark"] .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:hover,
+html body.dark-mode .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a:hover {
+  color: #0f172a !important;
+  text-decoration: underline !important;
+  background-color: transparent !important;
+}
 
 /* NUCLEAR OPTION - TARGET NEXT.JS LINK COMPONENT */
 html body.theme-dark .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title,
@@ -2342,21 +2352,6 @@ html body.dark-mode .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title
   font-weight: 900 !important;
   text-decoration: none !important;
 }
-
-/* TARGET NEXT.JS LINK SPECIFICALLY */
-html body.theme-dark .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a,
-html body[data-theme="dark"] .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a,
-html body.dark-mode .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title a {
-  color: #ffffff !important;
-  background-color: transparent !important;
-  font-weight: 900 !important;
-  text-decoration: none !important;
-  
-  &:hover {
-    color: #ffff00 !important;
-  }
-}
-} // Close .theme-dark
 
 // ============================================
 // ELECTRONICS SECTION LAYOUT FIX
@@ -2414,16 +2409,16 @@ html body.dark-mode .tp-cart-area .tp-cart-list .table tbody tr td.tp-cart-title
   .tp-product-gadget-categories-list {
     ul li a {
       color: var(--tp-text-body) !important;
-      background: rgba(var(--tp-bg-primary-rgb, 15, 23, 42), 0.8) !important;
+      background: rgba(15, 23, 42, 0.8) !important;
       padding: 8px 12px !important;
       border-radius: 4px !important;
       margin-bottom: 5px !important;
       display: block !important;
-      
-      &:hover {
-        color: var(--tp-theme-primary) !important;
-        background: rgba(var(--tp-theme-primary-rgb, 59, 130, 246), 0.1) !important;
-      }
+    }
+    
+    ul li a:hover {
+      color: var(--tp-theme-primary) !important;
+      background: rgba(59, 130, 246, 0.1) !important;
     }
   }
 }
