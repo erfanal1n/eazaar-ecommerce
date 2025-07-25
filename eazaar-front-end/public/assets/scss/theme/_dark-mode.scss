@@ -548,16 +548,16 @@ body.theme-dark .tp-footer-area,
 html.theme-dark .tp-footer-area {
   background: var(--tp-bg-primary) !important;
   border-top: 1px solid var(--tp-border-primary) !important;
-  color: var(--tp-common-white) !important;
+  color: var(--tp-common-black, #ffffff) !important; // FIXED: Use --tp-common-black with #ffffff fallback
 }
 
-// ALL FOOTER TEXT ELEMENTS - COMPREHENSIVE WHITE TEXT
+// ALL FOOTER TEXT ELEMENTS - COMPREHENSIVE WHITE TEXT  
 .theme-dark .tp-footer-area *,
 [data-theme="dark"] .tp-footer-area *,
 .dark-mode .tp-footer-area *,
 body.theme-dark .tp-footer-area *,
 html.theme-dark .tp-footer-area * {
-  color: var(--tp-common-white) !important;
+  color: var(--tp-common-black, #ffffff) !important; // FIXED: Use --tp-common-black with #ffffff fallback
 }
 
 .theme-dark .tp-footer-area h1,
@@ -596,7 +596,42 @@ html.theme-dark .tp-footer-area * {
 .dark-mode .tp-footer-area a,
 .dark-mode .tp-footer-area li,
 .dark-mode .tp-footer-area ul {
-  color: var(--tp-common-white) !important;
+  color: var(--tp-common-black, #ffffff) !important; // FIXED: Use --tp-common-black with #ffffff fallback
+}
+
+// NUCLEAR OPTION - HARDCODED WHITE TEXT FOR CRITICAL ELEMENTS
+.theme-dark .tp-footer-area .tp-footer-widget-title,
+.theme-dark .tp-footer-area .tp-footer-desc,
+.theme-dark .tp-footer-area .tp-footer-widget-content ul li a,
+.theme-dark .tp-footer-area .tp-footer-talk span,
+.theme-dark .tp-footer-area .tp-footer-talk h4 a,
+.theme-dark .tp-footer-area .tp-footer-contact-content p a,
+.theme-dark .tp-footer-bottom .tp-footer-copyright p,
+.theme-dark .tp-footer-bottom .tp-footer-copyright p a,
+[data-theme="dark"] .tp-footer-area .tp-footer-widget-title,
+[data-theme="dark"] .tp-footer-area .tp-footer-desc,
+[data-theme="dark"] .tp-footer-area .tp-footer-widget-content ul li a,
+[data-theme="dark"] .tp-footer-area .tp-footer-talk span,
+[data-theme="dark"] .tp-footer-area .tp-footer-talk h4 a,
+[data-theme="dark"] .tp-footer-area .tp-footer-contact-content p a,
+[data-theme="dark"] .tp-footer-bottom .tp-footer-copyright p,
+[data-theme="dark"] .tp-footer-bottom .tp-footer-copyright p a,
+.dark-mode .tp-footer-area .tp-footer-widget-title,
+.dark-mode .tp-footer-area .tp-footer-desc,
+.dark-mode .tp-footer-area .tp-footer-widget-content ul li a,
+.dark-mode .tp-footer-area .tp-footer-talk span,
+.dark-mode .tp-footer-area .tp-footer-talk h4 a,
+.dark-mode .tp-footer-area .tp-footer-contact-content p a,
+.dark-mode .tp-footer-bottom .tp-footer-copyright p,
+.dark-mode .tp-footer-bottom .tp-footer-copyright p a {
+  color: #ffffff !important; // HARDCODED WHITE - GUARANTEED VISIBILITY
+}
+
+// OVERRIDE FOOTER HOVER STATES THAT FORCE BLACK COLOR
+.theme-dark .tp-footer-widget ul li a:hover,
+[data-theme="dark"] .tp-footer-widget ul li a:hover,
+.dark-mode .tp-footer-widget ul li a:hover {
+  color: var(--tp-theme-primary, #0ea5e9) !important; // Override black hover states
 }
 
 // Footer widget titles - FORCE WHITE
@@ -606,7 +641,7 @@ html.theme-dark .tp-footer-area * {
 .theme-dark footer .tp-footer-widget-title,
 [data-theme="dark"] footer .tp-footer-widget-title,
 .dark-mode footer .tp-footer-widget-title {
-  color: var(--tp-common-white) !important;
+  color: var(--tp-common-black) !important; // FIXED: Use --tp-common-black (light in dark mode)
 }
 
 // Footer description - FORCE WHITE
@@ -616,7 +651,7 @@ html.theme-dark .tp-footer-area * {
 .theme-dark footer .tp-footer-desc,
 [data-theme="dark"] footer .tp-footer-desc,
 .dark-mode footer .tp-footer-desc {
-  color: var(--tp-common-white) !important;
+  color: var(--tp-common-black) !important; // FIXED: Use --tp-common-black (light in dark mode)
 }
 
 // Footer links in widget content - FORCE WHITE
@@ -626,7 +661,7 @@ html.theme-dark .tp-footer-area * {
 .theme-dark footer .tp-footer-widget-content ul li a,
 [data-theme="dark"] footer .tp-footer-widget-content ul li a,
 .dark-mode footer .tp-footer-widget-content ul li a {
-  color: var(--tp-common-white) !important;
+  color: var(--tp-common-black) !important; // FIXED: Use --tp-common-black (light in dark mode)
 }
 
 .theme-dark .tp-footer-area .tp-footer-widget-content ul li a:hover,
@@ -645,7 +680,7 @@ html.theme-dark .tp-footer-area * {
 .theme-dark footer .tp-footer-talk span,
 [data-theme="dark"] footer .tp-footer-talk span,
 .dark-mode footer .tp-footer-talk span {
-  color: var(--tp-common-white) !important;
+  color: var(--tp-common-black) !important; // FIXED: Use --tp-common-black (light in dark mode)
 }
 
 .theme-dark .tp-footer-area .tp-footer-talk h4,
@@ -660,7 +695,7 @@ html.theme-dark .tp-footer-area * {
 [data-theme="dark"] footer .tp-footer-talk h4 a,
 .dark-mode footer .tp-footer-talk h4,
 .dark-mode footer .tp-footer-talk h4 a {
-  color: var(--tp-common-white) !important;
+  color: var(--tp-common-black) !important; // FIXED: Use --tp-common-black (light in dark mode)
 }
 
 .theme-dark .tp-footer-area .tp-footer-talk h4 a:hover,
@@ -691,7 +726,7 @@ html.theme-dark .tp-footer-area * {
 .dark-mode footer .tp-footer-contact-content,
 .dark-mode footer .tp-footer-contact-content p,
 .dark-mode footer .tp-footer-contact-content p a {
-  color: var(--tp-common-white) !important;
+  color: var(--tp-common-black) !important; // FIXED: Use --tp-common-black (light in dark mode)
 }
 
 .theme-dark .tp-footer-area .tp-footer-contact-content p a:hover,
@@ -716,7 +751,7 @@ html.theme-dark .tp-footer-area * {
 .dark-mode .tp-footer-bottom .tp-footer-copyright,
 .dark-mode .tp-footer-bottom .tp-footer-copyright p,
 .dark-mode .tp-footer-bottom .tp-footer-copyright p a {
-  color: var(--tp-common-white) !important;
+  color: var(--tp-common-black) !important; // FIXED: Use --tp-common-black (light in dark mode)
 }
 
 .theme-dark .tp-footer-bottom .tp-footer-copyright p a:hover,
@@ -744,7 +779,7 @@ html.theme-dark .tp-footer-area * {
 [data-theme="dark"] footer .tp-footer-social a:hover,
 .dark-mode footer .tp-footer-social a:hover {
   background: var(--tp-theme-primary) !important;
-  color: var(--tp-common-white) !important;
+  color: var(--tp-common-black) !important; // FIXED: Use --tp-common-black (light in dark mode)
   border-color: var(--tp-theme-primary) !important;
 }
 
