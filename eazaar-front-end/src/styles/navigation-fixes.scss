@@ -76,11 +76,14 @@
     
     a {
       display: inline-block;
+    }
+    
+    /* Use consistent responsive logo sizing - remove hardcoded 50px */
+    .responsive-logo {
+      max-height: 80px; /* Match the main responsive logo mobile sizing */
       
-      img {
-        max-height: 50px;
-        width: auto;
-        object-fit: contain;
+      @media (max-width: 575.98px) {
+        max-height: 60px; /* Extra small screens */
       }
     }
   }
